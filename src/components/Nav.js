@@ -1,22 +1,28 @@
 import { Link } from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faHome} from "@fortawesome/free-solid-svg-icons"
+import {faSeedling} from "@fortawesome/free-solid-svg-icons"
+import {faUser} from "@fortawesome/free-solid-svg-icons"
+import {faCalendar} from "@fortawesome/free-solid-svg-icons"
+import {faCodeBranch} from "@fortawesome/free-solid-svg-icons"
 
 const Nav = () => {
     return (
         <div className= "NavBar">
             <Link to="/">
-                <div>Home</div>
+                <FontAwesomeIcon icon={faHome}/>
             </Link>
             <Link to="/garden">
-                <div>My Garden</div>
+                <div><FontAwesomeIcon icon={faSeedling}/></div>
             </Link>
             <Link to="/calendar">
-                <div>Calendar</div>
+                <div><FontAwesomeIcon icon={faCalendar}/></div>
             </Link>
             <Link to="/profile">
-                <div>Profile</div>
+                <div><FontAwesomeIcon icon={faUser}/></div>
             </Link>
             <Link to="/team">
-                <div>Team</div>
+                <div><FontAwesomeIcon icon={faCodeBranch}/></div>
             </Link>
         </div>
     )
