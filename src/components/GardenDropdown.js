@@ -1,8 +1,8 @@
-const Drop = () => {
+const GardenDropdown = () => {
     return (
         <button className="gardenButton">
             X
         </button>
     )
 }
- export default Drop
+ export default GardenDropdown
