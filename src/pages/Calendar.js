@@ -1,7 +1,13 @@
-const Calendar = () => {
-    return (
-        <h1>This is the Calendar Component!</h1>
-    )
-}
+import Task from "../components/Task"
+
+const Calendar=()=> {
+        return (
+                <div>
+                <h1>Tasks</h1>
+                <Task/>
+          
+                </div>
+            )
+        }
 
 export default Calendar

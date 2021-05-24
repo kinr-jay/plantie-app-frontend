@@ -1,6 +1,12 @@
+import PlantList from "../components/PlantList"
+
 const Garden = () => {
     return (
-        <h1>This is the My Garden Component!</h1>
+        <div className = "garden">
+        <h1>My Plants</h1>
+        <h3>You have 1 plant in your garden!</h3>
+        <PlantList/>
+        </div>
     )
 }
 
