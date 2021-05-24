@@ -1,17 +1,17 @@
-import Card from "./PlantCard"
+import PlantCard from "./PlantCard"
 
 const PlantList = () => {
     return (
         <div className="plantlist">
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
         </div>
     )
 }
