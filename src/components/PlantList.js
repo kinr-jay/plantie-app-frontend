@@ -1,6 +1,6 @@
 import Card from "./PlantCard"
 
-const List = () => {
+const PlantList = () => {
     return (
         <div className="plantlist">
             <Card/>
@@ -16,4 +16,4 @@ const List = () => {
     )
 }
 
-export default List
+export default PlantList
