@@ -1,0 +1,30 @@
+* {
+    // border: 1px solid black;
+}
+
+.plantlist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.plantcard {
+    display: grid;
+    background-color: #D2D2D2;
+    height: 300px;
+    width: 40vw;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+}
+    img {
+        height:150px;
+        margin: 20px;
+        border-radius: 20px;
+    }
+    h2 {
+        margin: 0px;
+    }
+    h4 {
+        margin: 0px;
+    }

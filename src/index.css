@@ -12,16 +12,5 @@ code {
     monospace;
 }
 
-.NavBar {
-  display: flex;
-  justify-content: space-around;
-  padding: 15px;
-  font-size: 1em;
-  color: red;
-}
 
-.NavBar a svg {
-  color: black;
-  font-size: 2em;
-}
 
