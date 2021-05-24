@@ -1,11 +1,19 @@
-import Card from "./PlantCard"
+import PlantCard from "./PlantCard"
 
-const List = () => {
+const PlantList = () => {
     return (
         <div className="plantlist">
-            <Card/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
+            <PlantCard/>
         </div>
     )
 }
 
-export default List
+export default PlantList
