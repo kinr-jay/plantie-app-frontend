@@ -1,13 +1,15 @@
 import PlantList from "../components/PlantList"
+import Drop from "../components/GardenDropdown"
 
-const Garden = () => {
+const MyGarden = () => {
     return (
         <div className = "garden">
         <h1>My Plants</h1>
-        <h3>You have 1 plant in your garden!</h3>
+        <Drop/>
+        <h3>You have # plants in your garden!</h3>
         <PlantList/>
         </div>
     )
 }
 
-export default Garden
+export default MyGarden

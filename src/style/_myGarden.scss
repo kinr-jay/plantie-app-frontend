@@ -1,26 +1,42 @@
 * {
     // border: 1px solid black;
 }
+.garden {
+    
+}
 
 .plantlist {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     justify-items: center;
+    padding-bottom: 5em;
+    gap: 20px;
+    
+}
+
+.gardenButton {
+    background-color: #326E62;
+    color: white;
+    font-weight: 900;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
 }
 
 .plantcard {
     display: grid;
     background-color: #D2D2D2;
-    height: 300px;
-    width: 40vw;
+    height: 250px;
+    width: 45vw;
     justify-content: center;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
 }
     img {
         height:150px;
-        margin: 20px;
         border-radius: 20px;
+        margin: 20px;
     }
     h2 {
         margin: 0px;
