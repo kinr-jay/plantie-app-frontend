@@ -1,6 +1,6 @@
 import './App.css';
 import './style/style.scss'
-//import {useState} from 'react'
+// import {useState} from 'react'
 import {Route, Switch} from "react-router-dom"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
@@ -12,6 +12,7 @@ import Plant from "./pages/Plant"
 import Nav from "./components/Nav"
 
 function App() {
+
   return (
     <div className="App">
       <Switch>
@@ -24,7 +25,7 @@ function App() {
         <Route path="/garden">
           <Garden/>
         </Route>
-        <Route path="/plant/:id"
+        <Route path="/plant/:name"
             render={
               (routerProps) => <Plant {...routerProps}
               />
