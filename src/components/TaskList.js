@@ -1,5 +1,4 @@
-// // import React from 'react';
-// import Calendar from "../pages/Calendar"
+// import React from 'react';
 import Task from "./Task" 
 import React, { useState, useEffect } from "react";
 function TaskList () {
@@ -58,7 +57,7 @@ const loading = () => {
     <div>
     {tasklist.length > 0 ? loaded() : loading()};
    
- <Calendar plant={task}/>
+  <Task plant={task}/>
   </div>
   )}
 
