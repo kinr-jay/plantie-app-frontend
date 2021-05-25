@@ -1,7 +1,7 @@
 import React from "react";
 const Plant = (props) => {
 
-const { plants } = props
+const { plant } = props
 
      return <div className='individualPlant'>
     
