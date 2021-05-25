@@ -13,7 +13,7 @@ const Plant = (props) => {
 
      return <div className='individualPlant'>
     
-        <article key={props.plant._id}>
+        <article>
           <img src={props.plant.img}/>
           <h1>{props.plant.name}</h1>
           <h4>Frequency: {props.plant.frequency}</h4>
