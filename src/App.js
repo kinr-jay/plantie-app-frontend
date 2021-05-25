@@ -90,10 +90,10 @@ const deletePlant = (plant) => {
           plants={plants}
           selectPlant={selectPlant}
           deletePlant={deletePlant}
-          plant={emptyPlant}
-          handleSubmit={handleCreate}
-          plant={selectedPlant}
-          handleSubmit={handleUpdate}
+          // plant={emptyPlant}
+          // handleSubmit={handleCreate}
+          // plant={selectedPlant}
+          // handleSubmit={handleUpdate}
           />
         </Route>
         <Route path="/login">
