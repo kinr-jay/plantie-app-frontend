@@ -90,6 +90,10 @@ const deletePlant = (plant) => {
           plants={plants}
           selectPlant={selectPlant}
           deletePlant={deletePlant}
+          plant={emptyPlant}
+          handleSubmit={handleCreate}
+          plant={selectedPlant}
+          handleSubmit={handleUpdate}
           />
         </Route>
         <Route path="/login">
@@ -101,8 +105,6 @@ const deletePlant = (plant) => {
         <Route path="/plant/:id"
             render={
               (routerProps) => <Plant {...routerProps}
-              plant={emptyPlant}
-              handleSubmit={handleCreate}
               />
             }
               />
