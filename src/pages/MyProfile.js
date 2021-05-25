@@ -47,15 +47,11 @@ const Profile = () => {
       />
       <h3>Need some help?</h3>
       <p>
-        
-        
         If you have any questions or need some help from the pant experts, just
-  
-  
-                  contact us.
-      
-      
+        contact us.
       </p>
+      <button className="contact-btn"></button>
+      <button className="logout-btn"></button>
     </div>
   )
 }
