@@ -1,7 +1,20 @@
-const Plant = () => {
-    return (
-        <h1>This is the Plant Component!</h1>
-    )
+
+import React from "react";
+const Plant = (props) => {
+
+
+     return <div className='individualPlant'>
+    
+        <article key={plant._id}>
+          <img src={plant.img}/>
+          <h1>{plant.name}</h1>
+          <h4>Fruequency: {plant.frequency}</h4>
+          <h4>Sunlight: {plant.sunligh}</h4>
+          <h4>Temprature: {plant.tempreture}</h4>
+          <h4>Description: {plant.description}</h4>
+        </article>
+    </div>
 }
+
 
 export default Plant
