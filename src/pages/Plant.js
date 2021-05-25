@@ -1,7 +1,7 @@
-
 import React from "react";
 const Plant = (props) => {
 
+const { plants } = props
 
      return <div className='individualPlant'>
     
@@ -15,6 +15,5 @@ const Plant = (props) => {
         </article>
     </div>
 }
-
 
 export default Plant
