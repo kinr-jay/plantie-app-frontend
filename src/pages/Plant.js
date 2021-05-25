@@ -8,13 +8,13 @@ const Plant = (props) => {
 
      return <div className='individualPlant'>
     
-        <article key={plant._id}>
-          <img src={plant.img}/>
-          <h1>{plant.name}</h1>
-          <h4>Fruequency: {plant.frequency}</h4>
-          <h4>Sunlight: {plant.sunligh}</h4>
-          <h4>Temprature: {plant.tempreture}</h4>
-          <h4>Description: {plant.description}</h4>
+        <article key={props.plant._id}>
+          <img src={props.plant.img}/>
+          <h1>{props.plant.name}</h1>
+          <h4>Fruequency: {props.plant.frequency}</h4>
+          <h4>Sunlight: {props.plant.sunligh}</h4>
+          <h4>Temprature: {props.plant.tempreture}</h4>
+          <h4>Description: {props.plant.description}</h4>
         </article>
     </div>
 }
