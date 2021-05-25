@@ -58,7 +58,7 @@ const loading = () => {
     <div>
     {tasklist.length > 0 ? loaded() : loading()};
    
-  <Calendar plant={task}/>
+  <Task plant={task}/>
   </div>
   )}
 
