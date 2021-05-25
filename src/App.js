@@ -12,7 +12,7 @@ import Plant from "./pages/Plant"
 import Nav from "./components/Nav"
 
 function App() {
-  const url="https://plantie-group-project.herokuapp.com"
+  const url="https://plantie-group-project.herokuapp.com/garden"
   const [plants, setPlants] = useState([])
   const emptyPlant = {
   
@@ -49,7 +49,7 @@ function App() {
 
 // handle create
 const handleCreate = (newPlants) => {
-  fetch(url + "/:gardenId/plants/", {
+  fetch(url + "/:gardenId/plants/:plantId", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -73,14 +73,13 @@ const selectPlant = (plant) =>{
 }
 
 const deletePlant = (plant) => {
-  fetch(url + "/garden/", {
+  fetch(url + "/:gardenId/plants/:plantId", {
     method: "delete"
   })
   .then(() => {
     getPlants()
   })
 }
-
 
   return (
     <div className="App">
@@ -102,7 +101,7 @@ const deletePlant = (plant) => {
         <Route path="/garden">
           <Garden/>
         </Route>
-        <Route path="/plant/:id"
+        <Route path="/plant/:name"
             render={
               (routerProps) => <Plant {...routerProps}
               />
