@@ -3,7 +3,12 @@ import React from "react";
 const Plant = (props) => {
 
     const plant = [
-        {name: "Coctus", img:"https://images.squarespace-cdn.com/content/v1/55d143f0e4b0d49a516f32a9/1596319940898-D4HMT75KOXZ0F0U0PD3Y/ke17ZwdGBToddI8pDm48kL7ZiGTVZ4_WkolJkgbeTjl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Uf0tdRk0l1Q3HtMgVa1wUGSf4x025uUlg8CddhKF8AejVzIgDbKuWbU6v7VINLj_HA/bunny+ear+cactus.jpg?format=1000w", alt:"plant", frequency: "Three times a Month", sunlight: "direct sun", tempreture: 45 , description: "This is my favorite plant"}
+        {name: "Coctus",
+         img:"https://canary.contestimg.wish.com/api/webimage/5c7fa4fefc2f9d48b8020088-large.jpg?cache_buster=8f0d33c27ee1d5acbebf084b43b6a520", alt:"plant",
+        frequency: "Three times a Month", 
+        sunlight: "direct sun", 
+        temperature: { min: 45, max: 80},
+        description: "This is my favorite plant"}
       ]
 
      return <div className='individualPlant'>
@@ -11,12 +16,18 @@ const Plant = (props) => {
         <article key={props.plant._id}>
           <img src={props.plant.img}/>
           <h1>{props.plant.name}</h1>
-          <h4>Fruequency: {props.plant.frequency}</h4>
-          <h4>Sunlight: {props.plant.sunligh}</h4>
-          <h4>Temprature: {props.plant.tempreture}</h4>
+          <h4>Frequency: {props.plant.frequency}</h4>
+          <h4>Sunlight: {props.plant.sunlight}</h4>
+          <h4>Temperature: {props.plant.temperature}</h4>
           <h4>Description: {props.plant.description}</h4>
         </article>
     </div>
 }
 
 export default Plant
+
+
+// //  temperature: {
+//     min: { type: Number, required: true },
+//     max: { type: Number, required: true },
+//   }
