@@ -5,8 +5,8 @@ const Plant = (props) => {
     const plant = [
         {name: "Coctus",
          img:"https://canary.contestimg.wish.com/api/webimage/5c7fa4fefc2f9d48b8020088-large.jpg?cache_buster=8f0d33c27ee1d5acbebf084b43b6a520", alt:"plant",
-        frequency: "Three times a Month", 
-        sunlight: "direct sun", 
+        frequency: 2, 
+        sunlight: "direct", 
         temperature: { min: 45, max: 80},
         description: "This is my favorite plant"}
       ]
@@ -25,9 +25,3 @@ const Plant = (props) => {
 }
 
 export default Plant
-
-
-// //  temperature: {
-//     min: { type: Number, required: true },
-//     max: { type: Number, required: true },
-//   }
