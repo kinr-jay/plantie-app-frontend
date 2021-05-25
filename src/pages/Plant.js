@@ -2,7 +2,6 @@ import React from "react";
 const Plant = (props) => {
 
 const { plants } = props
-// return the jsx for when we have the plants
 
      return <div className='individualPlant'>
     
@@ -16,6 +15,5 @@ const { plants } = props
         </article>
     </div>
 }
-
 
 export default Plant
