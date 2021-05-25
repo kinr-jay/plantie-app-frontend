@@ -101,9 +101,11 @@ const deletePlant = (plant) => {
         <Route path="/plant/:id"
             render={
               (routerProps) => <Plant {...routerProps}
+              plant={emptyPlant}
+              handleSubmit={handleCreate}
               />
             }
-            />
+              />
         <Route path="/calendar">
           <Calendar/>
         </Route>
