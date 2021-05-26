@@ -1,13 +1,10 @@
-$dark-green: #448071;
-$light-green: #82B9A7;
-$dark-peach: #FABAB1;
-$light-peach: #FEF2F1;
-
+@import "./variables.scss";
 
 .login-page {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: $work-sans;
 
     img {
         height: 200px;
@@ -18,6 +15,7 @@ $light-peach: #FEF2F1;
         color: $dark-green;
         margin-top: 0;
         margin-bottom: 0;
+        font-family: $comfortaa;
     }
 
     p {
