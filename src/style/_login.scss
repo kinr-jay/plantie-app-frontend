@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: $work-sans;
 
     img {
         height: 200px;
@@ -14,6 +15,7 @@
         color: $dark-green;
         margin-top: 0;
         margin-bottom: 0;
+        font-family: $comfortaa;
     }
 
     p {

@@ -1,31 +1,34 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import ProfileDropdown from "../components/ProfileDropdown"
 
-const Profile = () => {
+const Profile = ({ garden }) => {
   return (
     <div className="profile-page">
-      <h2>Hello Annie!</h2>
+      <h2>Hello {garden.firstName}!</h2>
       <ProfileDropdown
-        ddTitle={"Account"}
-        ddContent={
+        dropDownTitle={"Account"}
+        dropDownContent={
           <div>
-            <p>Name</p>
-            <p>Email</p>
-            <p>Password</p>
+            <p>Name: {garden.firstName + " " + garden.lastName}</p>
+            <p>Email: {garden.email}</p>
+            <Link to="/edit-account">
+              <button>Edit Info</button>
+            </Link>
           </div>
         }
       />
       <ProfileDropdown
-        ddTitle={"Settings"}
-        ddContent={
+        dropDownTitle={"Settings"}
+        dropdownContent={
           <div>
             <p>Watering Units</p>
           </div>
         }
       />
       <ProfileDropdown
-        ddTitle={"Terms of Use"}
-        ddContent={
+        dropDownTitle={"Terms of Use"}
+        dropdownContent={
           <div>
             <p>
               By using our application, you agree to allow us to harvest your
@@ -35,8 +38,8 @@ const Profile = () => {
         }
       />
       <ProfileDropdown
-        ddTitle={"Privacy Policy"}
-        ddContent={
+        dropDownTitle={"Privacy Policy"}
+        dropdownContent={
           <div>
             <p>
               We value your privacy, so we will only sell your data if we get a
@@ -50,8 +53,8 @@ const Profile = () => {
         If you have any questions or need some help from the pant experts, just
         contact us.
       </p>
-      <button className="contact-btn"></button>
-      <button className="logout-btn"></button>
+      <button className="contact-btn">Contact Us</button>
+      <button className="logout-btn">Logout</button>
     </div>
   )
 }

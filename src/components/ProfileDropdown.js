@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const ProfileDropdown = ({ ddTitle, ddContent }) => {
+const ProfileDropdown = ({ dropDownTitle, dropDownContent }) => {
   const [expanded, setExpanded] = useState(false)
 
   const handleClick = () => {
@@ -10,8 +10,8 @@ const ProfileDropdown = ({ ddTitle, ddContent }) => {
   return (
     <div className="profile-dd">
       <div className="profile-dd-title">
-        <p>{ddTitle}</p>
-        <button onClick={handleClick}>
+        <p>{dropDownTitle}</p>
+        <button className="toggle" onClick={handleClick}>
           {expanded ? (
             <i class="fas fa-chevron-up"></i>
           ) : (
@@ -19,11 +19,12 @@ const ProfileDropdown = ({ ddTitle, ddContent }) => {
           )}
         </button>
       </div>
+      <hr />
       <div
         style={expanded ? { display: "block" } : { display: "none" }}
         id="dd-content"
       >
-        {ddContent}
+        {dropDownContent}
       </div>
     </div>
   )
