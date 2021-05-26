@@ -17,7 +17,7 @@ console.log(props)
           <h1>{props.plant.name}</h1>
           <h4>Frequency: {props.plant.frequency}</h4>
           <h4>Sunlight: {props.plant.sunlight}</h4>
-          <h4>Temperature: {props.plant.temperature.min} {props.plant.temperature.max}</h4>
+          <h4>Temperature: {props.plant.species.temperature.min} {props.plant.species.temperature.max}</h4>
           <h4>Description: {props.plant.description}</h4>
         </article>
     </div>

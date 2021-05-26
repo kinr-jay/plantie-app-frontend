@@ -131,13 +131,15 @@ function App() {
           <Route
           path="/plant">
           <Plant 
-           plant={garden.plants[0]}/>
+           plant={garden && garden.plants ? garden.plants[0] : emptyPlant }
+           deletePlant={deletePlant}
+           />
         </Route>
         <Route path="/calendar">
           <Calendar />
         </Route>
         <Route path="/profile">
-          <Profile />
+          <Profile garden={garden} />
         </Route>
         <Route path="/team">
           <Team />
