@@ -6,7 +6,9 @@ const Home =(props)=> {
            return (
                 <div>
                 <h1>Today tasks</h1>
-                <TaskList/>
+                <TaskList
+                plants={props.plants}
+                />
           
                 </div>
             )
