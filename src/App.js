@@ -13,8 +13,8 @@ import Plant from "./pages/Plant"
 import Nav from "./components/Nav"
 
 function App() {
-  const url = "https://plantie-group-project.herokuapp.com/garden"
-  const [plants, setPlants] = useState([])
+  const url = "https://plantie-group-project.herokuapp.com"
+  const [garden, setGarden] = useState([])
   const emptyPlant = {
     birthday: "2021-05-24",
     lastWatered: "2021-05-24",
@@ -36,15 +36,17 @@ function App() {
 
   const [selectedPlant, setSelectedPlant] = useState(emptyPlant)
 
-  const getPlants = () => {
-    fetch(url + "/garden/:_id")
+  const getGarden = () => {
+    fetch(url + "/garden/60ac1567b7cdcf1018e93c85")
       .then((response) => response.json())
       .then((data) => {
-        setTimeout(setPlants([data]), 5000)
+        setTimeout(setGarden(data), 5000)
+        console.log(data)
       })
+      
   }
   React.useEffect(() => {
-    getPlants()
+    getGarden()
   }, [])
 
   // handle create
@@ -55,7 +57,7 @@ function App() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newPlants),
-    }).then(() => getPlants())
+    }).then(() => getGarden())
   }
   // handle update
   const handleUpdate = (plants) => {
@@ -65,7 +67,7 @@ function App() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(plants),
-    }).then(() => getPlants())
+    }).then(() => getGarden())
   }
 
   const selectPlant = (plant) => {
@@ -76,7 +78,7 @@ function App() {
     fetch(url + "/:gardenId/plants/:plantId", {
       method: "delete",
     }).then(() => {
-      getPlants()
+      getGarden()
     })
   }
 
@@ -85,20 +87,20 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home
-            plants={plants}
+            plants={garden.plants}
             selectPlant={selectPlant}
             deletePlant={deletePlant}
-            // plant={emptyPlant}
-            // handleSubmit={handleCreate}
-            // plant={selectedPlant}
-            // handleSubmit={handleUpdate}
+             setSelectedPlant={setSelectedPlant}
           />
         </Route>
         <Route path="/login">
           <Login />
         </Route>
         <Route path="/garden">
-          <MyGarden />
+          <MyGarden
+          plants={garden.plants}
+          setSelectedPlant={setSelectedPlant}
+           />
         </Route>
         <Route
           path="/add-plant"
@@ -126,6 +128,11 @@ function App() {
           path="/plant/:name"
           render={(routerProps) => <Plant {...routerProps} />}
         />
+          <Route
+          path="/plant">
+          <Plant 
+           plant={garden.plants[0]}/>
+        </Route>
         <Route path="/calendar">
           <Calendar />
         </Route>

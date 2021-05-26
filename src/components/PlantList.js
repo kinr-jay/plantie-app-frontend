@@ -1,17 +1,11 @@
 import PlantCard from "./PlantCard"
 
-const PlantList = () => {
+const PlantList = (props) => {
+    console.log(props)
     return (
         <div className="plantlist">
             <PlantCard/>
-            <PlantCard/>
-            <PlantCard/>
-            <PlantCard/>
-            <PlantCard/>
-            <PlantCard/>
-            <PlantCard/>
-            <PlantCard/>
-            <PlantCard/>
+            
         </div>
     )
 }

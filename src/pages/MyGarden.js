@@ -3,7 +3,7 @@ import PlantList from "../components/PlantList"
 import DropButton from "../components/GardenDropButton"
 import Drop from "../components/GardenDropdown"
 
-const MyGarden = () => {
+const MyGarden = (props) => {
 
     const [visable, setVisable] = useState(false)
 
@@ -24,7 +24,9 @@ const MyGarden = () => {
             visable={visable}/>
             <h1>My Plants</h1>
             <h3>You have # plants in your garden!</h3>
-            <PlantList/>
+            <PlantList
+            plants={props.plants}
+            />
         </div>
     )
 }
