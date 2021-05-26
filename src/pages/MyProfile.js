@@ -2,7 +2,9 @@ import React from "react"
 import { Link } from "react-router-dom"
 import ProfileDropdown from "../components/ProfileDropdown"
 
-const Profile = ({ garden }) => {
+const Profile = ({
+  garden = { firstName: "AM", lastName: "Squad", email: "test@plantie.com" },
+}) => {
   return (
     <div className="profile-page">
       <h2>Hello {garden.firstName}!</h2>
