@@ -22,7 +22,7 @@ const Profile = ({
       />
       <ProfileDropdown
         dropDownTitle={"Settings"}
-        dropdownContent={
+        dropDownContent={
           <div>
             <p>Watering Units</p>
           </div>
@@ -30,7 +30,7 @@ const Profile = ({
       />
       <ProfileDropdown
         dropDownTitle={"Terms of Use"}
-        dropdownContent={
+        dropDownContent={
           <div>
             <p>
               By using our application, you agree to allow us to harvest your
@@ -41,7 +41,7 @@ const Profile = ({
       />
       <ProfileDropdown
         dropDownTitle={"Privacy Policy"}
-        dropdownContent={
+        dropDownContent={
           <div>
             <p>
               We value your privacy, so we will only sell your data if we get a
