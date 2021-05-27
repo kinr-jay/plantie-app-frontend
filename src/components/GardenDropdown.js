@@ -12,7 +12,7 @@ const GardenDropdown = (props) => {
             <Link to={`/add-plant`}>
                 <p>Add a Plant!<FontAwesomeIcon icon={faSeedling}/>
                 <button className="searchButton">
-                
+                {'>'}
                 </button></p>
             </Link>
 
