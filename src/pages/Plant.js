@@ -4,7 +4,7 @@ const Plant = (props) => {
     return (
       <div className="individualPlant">
         <article>
-          <img src={props.plant.species.img} alt={props.plant.species.type} />
+          <img src={props.plant.species.img} alt="plantimage"/>
           <h1>{props.plant.name}</h1>
           <section className="details">
             <h4>Frequency: {props.plant.species.frequency}</h4>
@@ -19,15 +19,12 @@ const Plant = (props) => {
             <h4>Description: {props.plant.species.description}</h4>
           </form>
         </article>
-        <button
-          onClick={() => {
-            props.deletePlant(props.plant)
-          }}
-        >
-          Delete Plant
-        </button>
-      </div>
-    )
+        <button onClick={() => {
+            props.deletePlant(plant)
+          }}>
+            Delete Plant
+          </button>
+    </div>
 }
 
 export default Plant

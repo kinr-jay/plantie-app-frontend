@@ -1,21 +1,22 @@
 @import "./variables.scss";
-.signin-page{
+.login-part{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family:$comfortaa;
 }
-.welcomeback{
+.accoutcreate {
     color: $dark-green;
     margin-top: 0;
     margin-bottom: 0;
     font-family: $comfortaa;
 }
-.wb {
+.ca {
     margin: 20px 0;
     width: 250px;
 }
-.signup-email {
+
+.login-email{
     background-color:white;
     color: $less-black;
         font-weight: 600;
@@ -28,7 +29,7 @@
         width: 200px;
         font-family: $comfortaa;
 }
-.signup-password {
+.login-pw{
     background-color:white;
     color: $less-black;
         font-weight: 600;
@@ -41,14 +42,14 @@
         width: 200px;
         font-family:$comfortaa ;
 }
-.signup-bttn {
-        background-color:$dark-green; 
-        color: white;
+.signin-bttn {
+    background-color:$dark-green; 
+    color: white;
         font-weight: 600;
         padding: 8px 50px;
         margin: 5px 0;
         border-radius: 20px;
         border: 0;
         width: 200px;
+        font-family:Comfortaa, cursive;
 }
-
