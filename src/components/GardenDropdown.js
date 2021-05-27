@@ -9,7 +9,7 @@ const GardenDropdown = (props) => {
         <div className="dropdown">
             <p>Find a plant! <FontAwesomeIcon icon={faSearch}/>
             <button className="searchButton">
-            >
+            
             </button></p>
         </div>
         : null
