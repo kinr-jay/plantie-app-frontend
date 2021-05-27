@@ -146,17 +146,10 @@ function App() {
         <Route
           path="/plant/:name"
           render={(routerProps) => <Plant {...routerProps}
-          plant={garden && garden.plants ? garden.plants[0] : emptyPlant }
+          plant={selectedPlant}
            deletePlant={deletePlant} 
            />}
         />
-          <Route
-          path="/plant">
-          <Plant 
-           plant={garden && garden.plants ? garden.plants[0] : emptyPlant }
-           deletePlant={deletePlant}
-           />
-        </Route>
         <Route path="/calendar">
           <Calendar />
         </Route>

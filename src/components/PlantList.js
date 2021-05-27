@@ -9,9 +9,8 @@ const PlantList = (props) => {
             {plants.map((plant, index) => (
                 <PlantCard
                 key= {index}
-                img= {plant.species.img}
-                name={plant.name}
-                type={plant.species.type}/> 
+                plant={plant}
+                setSelectedPlant= {props.setSelectedPlant}/> 
             ))} 
         </div>
     )

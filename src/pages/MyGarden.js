@@ -26,6 +26,7 @@ const MyGarden = (props) => {
             <h3>You have # plants in your garden!</h3>
             <PlantList
             plants={props.plants}
+            setSelectedPlant= {props.setSelectedPlant}
             />
         </div>
     )

@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom"
-const Card = (props) => {
+const Card = ({plant, setSelectedPlant}) => {
+
+const handleSelected = ()=> {
+        setSelectedPlant(plant)
+    }
+
     return (
-        <Link to={`/plant/${props.name}`}>
-            <div className="plantcard">
-                <img src={props.img}/>
-                <h2>{props.name}</h2>
-                <h4>{props.type}</h4>
+        <Link to={`/plant/${plant.name}`}>
+            <div className="plantcard" onClick={handleSelected}>
+                <img src={plant.species.img}/>
+                <h2>{plant.name}</h2>
+                <h4>{plant.species.type}</h4>
             </div>
         </Link>
     )
