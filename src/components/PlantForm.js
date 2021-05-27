@@ -3,6 +3,7 @@ import React from "react";
 const PlantForm = (props) => {
   //STATE FOR THE FORM
   const [formData, setFormData] = React.useState(props.plant)
+  const [imageFile, setImageFile] = React.useState(null)
 
   //State of all species options
   const [species, setSpecies] = React.useState(null)
@@ -10,6 +11,7 @@ const PlantForm = (props) => {
   //State Variable to track whether a plant species has been selected.
   const [plantSelected, setPlantSelected] = React.useState(false)
 
+  // useEffect to pull a list of Plant species for the dropdown selection input
   const url = "https://plantie-group-project.herokuapp.com"
   React.useEffect(() => {
     fetch(url + "/plants")
@@ -18,20 +20,25 @@ const PlantForm = (props) => {
   }, [])
 
   //FUNCTIONS
+  ///////////
+
+  // Submit handler function
   const handleSubmit = (event) => {
     event.preventDefault() // Prevent PlantFormfrom Refreshing
     if (plantSelected) {
-      props.handleSubmit(formData) // Submit to Parents desired function
+      props.handleSubmit(formData, imageFile) // Submit to Parents desired function
       props.history.push("/garden") //Push back to Garden page
     } else {
       alert("Please select a plant species.")
     }
   }
 
+  // Change handler function for name and birthday form inputs
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value })
   }
 
+  // Change handler function for plant species option collection
   const handleOptionChange = (event) => {
     setPlantSelected(true)
     const index = event.target.options.selectedIndex
@@ -41,15 +48,10 @@ const PlantForm = (props) => {
     })
   }
 
-  /* help found through https://stackoverflow.com/questions/6150289/how-can-i-convert-an-image-into-base64-string-using-javascript */
+  // Change handler function for file selection
   const handleFileSelect = (event) => {
     let file = event.target.files[0]
-    const reader = new FileReader()
-    reader.onloadend = () => {
-      console.log(typeof reader.result)
-      setFormData({ ...formData, img: reader.result })
-    }
-    reader.readAsDataURL(file)
+    setImageFile(file)
   }
 
   const loading = () => {
@@ -102,8 +104,8 @@ const PlantForm = (props) => {
           />
         </div>
         <div className="img-preview">
-          {formData.img !== "" && (
-            <img src={formData.img} alt="plant preview" />
+          {imageFile && (
+            <img src={URL.createObjectURL(imageFile)} alt="plant preview" />
           )}
         </div>
         <input type="submit" value={props.label} />
