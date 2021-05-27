@@ -28,7 +28,7 @@ const Plant = (props) => {
           </form>
         </article>
         <button onClick={() => {
-            props.deletePlant(plant); {
+            props.deletePlant(props.plant); {
                 props.history.push("/garden") 
             }
           }}>
