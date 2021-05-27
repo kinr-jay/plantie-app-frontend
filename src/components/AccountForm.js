@@ -25,7 +25,7 @@ const AccountForm = ({ existingUser, label }) => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style= {{backgroundColor:"#FEF8F7"}}>
     <div style={{ display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -53,7 +53,7 @@ const AccountForm = ({ existingUser, label }) => {
          />
 
     </div>
-    <div>
+    <div style= {{backgroundColor:"#FEF8F7"}}>
    
         <input style={{backgroundColor:"white", color: "#242424",
         fontWeight: "600",
