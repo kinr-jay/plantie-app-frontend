@@ -52,14 +52,7 @@ const AccountForm = ({ existingUser, label }) => {
     
         </div>
 
-      <button style={{backgroundColor:" #326E62", color: "white",
-        fontWeight: "600",
-        padding: "8px 50px",
-        margin: "5px 0",
-        borderRadius: "20px",
-        border: "0",
-        width: "200px",
-        fontFamily:"Comfortaa, cursive"}}>Sign Up</button>
+      <button className="signup-bttn">Sign Up</button>
     </form>
   )
 }

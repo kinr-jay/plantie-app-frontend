@@ -32,3 +32,14 @@
     align-items: center;
     font-family:$comfortaa;
 }
+.signup-bttn {
+    background-color:$dark-green; 
+    color: white;
+        font-weight: 600;
+        padding: 8px 50px;
+        margin: 5px 0;
+        border-radius: 20px;
+        border: 0;
+        width: 200px;
+        font-family:Comfortaa, cursive;
+}
