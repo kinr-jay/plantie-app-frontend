@@ -8,12 +8,14 @@ const GardenDropdown = (props) => {
     return (
         visable?
         <div className="dropdown">
+
             <Link to={`/add-plant`}>
                 <p>Add a Plant!<FontAwesomeIcon icon={faSeedling}/>
                 <button className="searchButton">
                 >
                 </button></p>
             </Link>
+
         </div>
         : null
     )

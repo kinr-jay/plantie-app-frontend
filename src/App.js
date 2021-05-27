@@ -11,7 +11,8 @@ import Profile from "./pages/MyProfile"
 import Team from "./pages/Team"
 import Plant from "./pages/Plant"
 import Nav from "./components/Nav"
-
+import AccountForm from './components/AccountForm';
+import LoginForm from './components/LoginForm'
 function App() {
   const url = "https://plantie-group-project.herokuapp.com"
   const [garden, setGarden] = useState([])
@@ -94,8 +95,26 @@ function App() {
           />
         </Route>
         <Route path="/login">
-          <Login />
+          <Login/>
         </Route>
+        <Route
+          path="/signup"
+          render={(routerProps) => (
+            <AccountForm
+              {...routerProps}
+              
+            />
+          )}
+        />
+        <Route
+          path="/signin"
+          render={(routerProps) => (
+            <LoginForm
+              {...routerProps}
+            
+            />
+          )}
+        />
         <Route path="/garden">
           <MyGarden
           plants={garden.plants}
