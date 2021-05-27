@@ -1,8 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 const Plant = (props) => {
-      
-    const { plant } = props
+
 
      return <div className='individualPlant'>
         <Link to="/garden">
@@ -20,10 +19,13 @@ const Plant = (props) => {
             </h4>
             <h4>
               <i class="fas fa-temperature-high"></i> Temperature: {props.plant.species.temperature.min} - {props.plant.species.temperature.max}
+
             </h4>
           </section>
-          <hr/>
-          <form><h4>Description: {props.plant.species.description}</h4></form>
+          <hr />
+          <form>
+            <h4>Description: {props.plant.species.description}</h4>
+          </form>
         </article>
         <button onClick={() => {
             props.deletePlant(plant); {

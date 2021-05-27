@@ -15,6 +15,8 @@ import AccountForm from './components/AccountForm';
 import LoginForm from './components/LoginForm'
 function App() {
   const url = "https://plantie-group-project.herokuapp.com"
+  // const url = "http://localhost:4500"
+  const cloudinary = "https://api.Cloudinary.com/v1_1/kinr-jay/image/upload"
   const [garden, setGarden] = useState([])
   const emptyPlant = {
     birthday: "2021-05-24",
@@ -42,32 +44,47 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setTimeout(setGarden(data), 5000)
-        console.log(data)
       })
-      
   }
   React.useEffect(() => {
     getGarden()
   }, [])
 
   // handle create
-  const handleCreate = (newPlants) => {
-    fetch(url + "/:gardenId/plants/:plantId", {
+  const handleCreate = (newPlant, image) => {
+    // console.log(newPlant)
+    const imageData = new FormData()
+    imageData.append("file", image)
+    imageData.append("upload_preset", "plantie")
+    const options = {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newPlants),
-    }).then(() => getGarden())
+      body: imageData,
+    }
+    fetch(cloudinary, options)
+      .then((res) => res.json())
+      .then((data) => {
+        newPlant.img = data.secure_url
+        fetch(
+          url + "/garden/60ac1567b7cdcf1018e93c85/plants/" + newPlant.species,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newPlant),
+          }
+        ).then(() => getGarden())
+      })
   }
+
   // handle update
-  const handleUpdate = (plants) => {
-    fetch(url + "/:gardenId/plants/:plantId", {
+  const handleUpdate = (plant) => {
+    fetch(url + "/garden/60ac1567b7cdcf1018e93c85/plants/" + plant._id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(plants),
+      body: JSON.stringify(plant),
     }).then(() => getGarden())
   }
 
@@ -76,7 +93,7 @@ function App() {
   }
 
   const deletePlant = (plant) => {
-    fetch(url + "/:gardenId/plants/:plantId", {
+    fetch(url + "/garden/60ac1567b7cdcf1018e93c85/plants/" + plant._id, {
       method: "delete",
     }).then(() => {
       getGarden()
@@ -91,35 +108,25 @@ function App() {
             plants={garden.plants}
             selectPlant={selectPlant}
             deletePlant={deletePlant}
-             setSelectedPlant={setSelectedPlant}
+            setSelectedPlant={setSelectedPlant}
           />
         </Route>
         <Route path="/login">
-          <Login/>
+          <Login />
         </Route>
         <Route
           path="/signup"
-          render={(routerProps) => (
-            <AccountForm
-              {...routerProps}
-              
-            />
-          )}
+          render={(routerProps) => <AccountForm {...routerProps} />}
         />
         <Route
           path="/signin"
-          render={(routerProps) => (
-            <LoginForm
-              {...routerProps}
-            
-            />
-          )}
+          render={(routerProps) => <LoginForm {...routerProps} />}
         />
         <Route path="/garden">
           <MyGarden
-          plants={garden.plants}
-          setSelectedPlant={setSelectedPlant}
-           />
+            plants={garden.plants}
+            setSelectedPlant={setSelectedPlant}
+          />
         </Route>
         <Route
           path="/add-plant"
@@ -145,10 +152,14 @@ function App() {
         />
         <Route
           path="/plant/:name"
-          render={(routerProps) => <Plant {...routerProps}
-          plant={selectedPlant}
-           deletePlant={deletePlant}
-           />}
+
+          render={(routerProps) => (
+            <Plant
+              {...routerProps}
+              plant={selectedPlant}
+              deletePlant={deletePlant}
+            />
+          )}
         />
         <Route path="/calendar">
           <Calendar />
