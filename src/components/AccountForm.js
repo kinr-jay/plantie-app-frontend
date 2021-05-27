@@ -26,26 +26,14 @@ const AccountForm = ({ existingUser, label }) => {
 
   return (
     <form onSubmit={handleSubmit} style= {{backgroundColor:"#FEF8F7"}}>
-    <div style={{ display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    fontFamily:"Comfortaa, cursive"}} className="signin-page">
+    <div className="signin-page">
     <img style={{ height:"200px",
         width: "auto",}}
           src="https://res.cloudinary.com/kinr-jay/image/upload/v1621966095/GA/plantie%20app/plantie-icon-vector_bjdb6k.svg"
           alt="plantie logo"
         />
                 
-    <input style={{backgroundColor:"white", color: "#242424",
-        fontWeight: "600",
-        padding: "8px 50px",
-        margin: "5px 0",
-        borderRadius: "16px",
-        borderStyle:"solid",
-        borderColor: "black", 
-        border: "",
-        width: "200px",
-        fontFamily:"Comfortaa, cursive"}}
+    <input className="signup-email" 
          type="email"
          name="email"
          onChange={handleChange}
@@ -55,17 +43,8 @@ const AccountForm = ({ existingUser, label }) => {
     </div>
     <div style= {{backgroundColor:"#FEF8F7"}}>
    
-        <input style={{backgroundColor:"white", color: "#242424",
-        fontWeight: "600",
-        padding: "8px 50px",
-        margin: "5px 0",
-        borderRadius: "16px",
-        borderStyle:"solid",
-        borderColor: "black", 
-        border: "",
-        width: "200px",
-        fontFamily:"Comfortaa, cursive"}}
-           type="password"
+        <input className="signup-password"
+        type="password"
            name="password"
            onChange={handleChange}
            value={formData.password}
