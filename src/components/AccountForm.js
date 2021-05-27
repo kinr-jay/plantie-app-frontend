@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import {Link} from "react-router-dom"
+
 
 const AccountForm = ({ existingUser, label }) => {
   const [formData, setFormData] = useState({
@@ -19,10 +19,10 @@ const AccountForm = ({ existingUser, label }) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const handleFileSelect = (event) => {
-    console.log(event.target.files[0])
-    setFormData({...formData, img: event.target.files[0]})
-  }
+  // const handleFileSelect = (event) => {
+  //   console.log(event.target.files[0])
+  //   setFormData({...formData, img: event.target.files[0]})
+  // }
 
 
   return (
