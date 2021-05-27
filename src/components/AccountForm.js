@@ -34,7 +34,7 @@ const AccountForm = ({ existingUser, label }) => {
           alt="plantie logo"
         />
         <h1 className="accoutcreate">plantie</h1>
-        <p>CREATE ACCOUNT</p>
+        <p className="ca">CREATE ACCOUNT</p>
     <input className="signup-email" 
          type="email"
          name="email"

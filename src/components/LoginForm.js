@@ -28,7 +28,7 @@ const LoginForm = (props) => {
           alt="plantie logo"
         />
         <h1 className="welcomeback">plantie</h1>
-        <p>WELCOME BACK!</p>
+        <p className="wb">WELCOME BACK!</p>
       <input className="login-email"
         type="email"
         name="email"
