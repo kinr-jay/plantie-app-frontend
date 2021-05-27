@@ -40,7 +40,7 @@ const AccountForm = ({ existingUser, label }) => {
          onChange={handleChange}
          value={formData.email}
          />
-{/* <label>Email</label> */}
+
     </div>
     <div style= {{backgroundColor:"#FEF8F7"}}>
         {/* <label> Password </label> */}
