@@ -22,7 +22,7 @@ const Plant = (props) => {
           <hr/>
           <form><h4>Description: {props.plant.species.description}</h4></form>
         </article>
-        {/* <button onClick={() => {
+         <button onClick={() => {
             props.deletePlant(plant)
           }}>
             Delete Plant
@@ -30,7 +30,7 @@ const Plant = (props) => {
         <button onClick={() => {
             props.selectedPlant(plant)
             props.history.push("/edit-plant")}}> Edit Plant
-        </button> */}
+        </button>
     </div>
 }
 
