@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faSearch} from "@fortawesome/free-solid-svg-icons"
+import {faSeedling} from "@fortawesome/free-solid-svg-icons"
 const GardenDropdown = (props) => {
     
     const visable= props.visable
@@ -7,10 +8,14 @@ const GardenDropdown = (props) => {
     return (
         visable?
         <div className="dropdown">
-            <p>Find a plant! <FontAwesomeIcon icon={faSearch}/>
-            <button className="searchButton">
-            >
-            </button></p>
+
+            <Link to={`/add-plant`}>
+                <p>Add a Plant!<FontAwesomeIcon icon={faSeedling}/>
+                <button className="searchButton">
+                {'>'}
+                </button></p>
+            </Link>
+
         </div>
         : null
     )

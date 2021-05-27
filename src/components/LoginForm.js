@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const LoginForm = ({ existingUser, label }) => {
+const LoginForm = (props) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,13 +16,7 @@ const LoginForm = ({ existingUser, label }) => {
 
   return (
     <form>
-      <input
-        style={existingUser && { display: "none" }}
-        type="text"
-        name="name"
-        onChange={handleChange}
-        value={formData.name}
-      />
+
       <input
         type="email"
         name="email"
@@ -35,7 +29,7 @@ const LoginForm = ({ existingUser, label }) => {
         onChange={handleChange}
         value={formData.password}
       />
-      <button className="submit-btn">{label}</button>
+      <button className="submit-btn"> Sign In</button>
     </form>
   )
 }
