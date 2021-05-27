@@ -20,8 +20,8 @@ const LoginForm = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} style= {{backgroundColor:"#FEF8F7"}}>
-      <div className="login-part"> 
+    <form onSubmit={handleSubmit} >
+      <div className="login-part"  > 
       <img style={{ height:"200px",
         width: "auto",}}
           src="https://res.cloudinary.com/kinr-jay/image/upload/v1621966095/GA/plantie%20app/plantie-icon-vector_bjdb6k.svg"

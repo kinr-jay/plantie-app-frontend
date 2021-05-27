@@ -26,7 +26,7 @@ const AccountForm = ({ existingUser, label }) => {
 
 
   return (
-    <form onSubmit={handleSubmit} style= {{backgroundColor:"#FEF8F7"}}>
+    <form onSubmit={handleSubmit}>
     <div className="signin-page">
     <img style={{ height:"200px",
         width: "auto",}}
@@ -43,7 +43,6 @@ const AccountForm = ({ existingUser, label }) => {
 
     </div>
     <div style= {{backgroundColor:"#FEF8F7"}}>
-        {/* <label> Password </label> */}
         <input className="signup-password"
         type="password"
            name="password"
