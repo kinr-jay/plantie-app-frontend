@@ -33,24 +33,24 @@ const AccountForm = ({ existingUser, label }) => {
           src="https://res.cloudinary.com/kinr-jay/image/upload/v1621966095/GA/plantie%20app/plantie-icon-vector_bjdb6k.svg"
           alt="plantie logo"
         />
-                
+        
     <input className="signup-email" 
          type="email"
          name="email"
          onChange={handleChange}
          value={formData.email}
          />
-
+{/* <label>Email</label> */}
     </div>
     <div style= {{backgroundColor:"#FEF8F7"}}>
-   
+        {/* <label> Password </label> */}
         <input className="signup-password"
         type="password"
            name="password"
            onChange={handleChange}
            value={formData.password}
         />
-    
+   
         </div>
 
       <button className="signup-bttn">Sign Up</button>
