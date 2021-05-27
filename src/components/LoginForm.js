@@ -17,19 +17,19 @@ const LoginForm = (props) => {
   return (
     <form>
 
-      <input
+      <input className="login-email"
         type="email"
         name="email"
         onChange={handleChange}
         value={formData.email}
       />
-      <input
+      <input className="login-pw"
         type="password"
         name="password"
         onChange={handleChange}
         value={formData.password}
       />
-      <button className="submit-btn"> Sign In</button>
+      <button className="signin-bttn"> Sign In</button>
     </form>
   )
 }
