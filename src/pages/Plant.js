@@ -10,12 +10,10 @@ const Plant = (props) => {
           <h1>{props.plant.name}</h1>
           <section className= "details">
             <h4>
-              <i class="far fa-calendar"></i> 
-              Frequency: {props.plant.species.frequency}
+              <i class="far fa-calendar"></i>  Frequency: {props.plant.species.frequency}
             </h4>
             <h4>
-              <i class="fas fa-sun"></i> 
-              Sunlight: {props.plant.species.sunlight}
+              <i class="fas fa-sun"></i>  Sunlight: {props.plant.species.sunlight}
             </h4>
             <h4>
               <i class="fas fa-temperature-high"></i> Temperature: {props.plant.species.temperature.min} - {props.plant.species.temperature.max}
@@ -24,11 +22,15 @@ const Plant = (props) => {
           <hr/>
           <form><h4>Description: {props.plant.species.description}</h4></form>
         </article>
-        <button onClick={() => {
+        {/* <button onClick={() => {
             props.deletePlant(plant)
           }}>
             Delete Plant
-          </button>
+        </button>
+        <button onClick={() => {
+            props.selectedPlant(plant)
+            props.history.push("/edit-plant")}}> Edit Plant
+        </button> */}
     </div>
 }
 

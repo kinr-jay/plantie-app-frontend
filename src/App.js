@@ -147,7 +147,8 @@ function App() {
           path="/plant/:name"
           render={(routerProps) => <Plant {...routerProps}
           plant={selectedPlant}
-           deletePlant={deletePlant} 
+           deletePlant={deletePlant}
+           handleSubmit={handleUpdate} 
            />}
         />
         <Route path="/calendar">
