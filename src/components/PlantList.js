@@ -6,8 +6,9 @@ const PlantList = (props) => {
 
     const loaded = () => (
         <div className="plantlist">
-            {plants.map((plant) => (
+            {plants.map((plant, index) => (
                 <PlantCard
+                key= {index}
                 img= {plant.species.img}
                 name={plant.name}
                 type={plant.species.type}/> 
