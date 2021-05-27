@@ -6,7 +6,7 @@ const Plant = (props) => {
      return <div className='individualPlant'>
     
         <article>
-          <img src={props.plant.species.img}/>
+          <img src={props.plant.species.img} alt="plantimage"/>
           <h1>{props.plant.name}</h1>
           <section className= "details">
           <h4>Frequency: {props.plant.species.frequency}</h4>
@@ -17,7 +17,7 @@ const Plant = (props) => {
           <form><h4>Description: {props.plant.species.description}</h4></form>
         </article>
         <button onClick={() => {
-            props.deletePlant(Plant)
+            props.deletePlant(plant)
           }}>
             Delete Plant
           </button>
