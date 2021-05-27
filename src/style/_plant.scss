@@ -6,7 +6,8 @@
 article img {
   width: 40%;
   height: 40%;
-  border-radius: 10px;
+  padding-top: 15px;
+  border-radius: 5%;
 }
 // name
 article h1 {
@@ -54,6 +55,10 @@ button:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-
-
+// arrow back design
+.fa-customize {
+    color: gray;
+    margin-top: 10px;
+    padding-right: 50%;
+}
 }

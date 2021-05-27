@@ -148,7 +148,6 @@ function App() {
           render={(routerProps) => <Plant {...routerProps}
           plant={selectedPlant}
            deletePlant={deletePlant}
-           handleSubmit={handleUpdate} 
            />}
         />
         <Route path="/calendar">

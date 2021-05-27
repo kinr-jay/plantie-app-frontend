@@ -1,10 +1,13 @@
 import React from "react";
+import {Link} from "react-router-dom";
 const Plant = (props) => {
       
     const { plant } = props
 
      return <div className='individualPlant'>
-    
+        <Link to="/garden">
+            <i class="fas fa-chevron-circle-left fa-20px fa-customize"></i>
+        </Link>
         <article>
           <img src={props.plant.species.img} alt="plantimage"/>
           <h1>{props.plant.name}</h1>
@@ -22,15 +25,18 @@ const Plant = (props) => {
           <hr/>
           <form><h4>Description: {props.plant.species.description}</h4></form>
         </article>
-        {/* <button onClick={() => {
-            props.deletePlant(plant)
+        <button onClick={() => {
+            props.deletePlant(plant); {
+                props.history.push("/garden") 
+            }
           }}>
             Delete Plant
         </button>
-        <button onClick={() => {
-            props.selectedPlant(plant)
-            props.history.push("/edit-plant")}}> Edit Plant
-        </button> */}
+        <button>Edit Plant
+            {/* {props.history.push("/edit-plant")}Edit Plant */}
+            {/* <link>{props.history.push("/edit-plant")}Edit Plant</link> */}
+        </button>
+        
     </div>
 }
 
