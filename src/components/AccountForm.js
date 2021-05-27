@@ -33,7 +33,7 @@ const AccountForm = ({ existingUser, label }) => {
           src="https://res.cloudinary.com/kinr-jay/image/upload/v1621966095/GA/plantie%20app/plantie-icon-vector_bjdb6k.svg"
           alt="plantie logo"
         />
-        <h1>Plantie</h1>
+        <h1 className="accoutcreate">plantie</h1>
         <p>CREATE ACCOUNT</p>
     <input className="signup-email" 
          type="email"
