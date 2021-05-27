@@ -1,5 +1,8 @@
 @import "./variables.scss";
 
+
+.individualPlant{
+
 article img {
   width: 40%;
   height: 40%;
@@ -31,7 +34,7 @@ article form h4 {
 }
 
 // button
-article button {
+button {
     padding: 5px 20px;
     margin: 10px;
     color: black;
@@ -42,14 +45,15 @@ article button {
     box-shadow: 0 3px #999;
   }
 
-article button:hover {
+button:hover {
     color:white;
     background-color: grey;
   }
-article button:active {
+button:active {
     background-color: grey;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
 
 
+}
