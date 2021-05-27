@@ -8,8 +8,8 @@ const PlantForm = (props) => {
   const [species, setSpecies] = React.useState(null)
 
   //State Variable to track whether a plant species has been selected.
-  const [plantSelected , setPlantSelected] = React.useState(false)
-  
+  const [plantSelected, setPlantSelected] = React.useState(false)
+
   const url = "https://plantie-group-project.herokuapp.com"
   React.useEffect(() => {
     fetch(url + "/plants")
@@ -35,13 +35,21 @@ const PlantForm = (props) => {
   const handleOptionChange = (event) => {
     setPlantSelected(true)
     const index = event.target.options.selectedIndex
-    setFormData({ ...formData, [event.target.name]: event.target.options[index].value })
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.options[index].value,
+    })
   }
 
+  /* help found through https://stackoverflow.com/questions/6150289/how-can-i-convert-an-image-into-base64-string-using-javascript */
   const handleFileSelect = (event) => {
     let file = event.target.files[0]
-    console.log(file)
-    setFormData({ ...formData, img: event.target.files[0] })
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      console.log(typeof reader.result)
+      setFormData({ ...formData, img: reader.result })
+    }
+    reader.readAsDataURL(file)
   }
 
   const loading = () => {
@@ -76,7 +84,9 @@ const PlantForm = (props) => {
           <select name="species" id="species" onChange={handleOptionChange}>
             <option value="select-a-plant">Select a Plant</option>
             {species.map((species, index) => (
-              <option key={index} value={species._id}>{species.type}</option>
+              <option key={index} value={species._id}>
+                {species.type}
+              </option>
             ))}
           </select>
         </div>
@@ -93,7 +103,7 @@ const PlantForm = (props) => {
         </div>
         <div className="img-preview">
           {formData.img !== "" && (
-            <img src={URL.createObjectURL(formData.img)} alt="plant preview" />
+            <img src={formData.img} alt="plant preview" />
           )}
         </div>
         <input type="submit" value={props.label} />

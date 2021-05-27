@@ -1,17 +1,16 @@
 // import React from 'react';
 import Task from "./Task" 
-import React, { useState, useEffect } from "react";
 
 function TaskList (props) {
 const loaded = () => (
   <div className="plantlist">
     {props.plants.map((plant, index) => (
-     <div className="plantcards" key={index}>
-     <img className="imgbg" src={plant.species.img} onClick={()=> ""}/>
-     <h4>Name: {plant.name}</h4>
-     <h4>Birthday: {plant.birthday}</h4>
-     <h4>Last Watered: {plant.lastWatered}</h4>
-     </div>
+      <div className="plantcards" key={index}>
+      <img className="imgbg" src={plant.species.img} onClick={()=> ""} alt={plant.species.type}/>
+      <h4>Name: {plant.name}</h4>
+      <h4>Birthday: {plant.birthday}</h4>
+      <h4>Last Watered: {plant.lastWatered}</h4>
+      </div>
     
     ))}
     
@@ -20,15 +19,14 @@ const loaded = () => (
 
 
 const loading = () => {
- return  <h1> Loading . . . .</h1>
+  return  <h1> Loading . . . .</h1>
   }
   
   return (
     <div>
-    {props.plants ? loaded() : loading()};
-   
-  <Task/>
-  </div>
+      {props.plants ? loaded() : loading()};
+        <Task/>
+    </div>
   )}
 
 export default TaskList;

@@ -43,7 +43,6 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setTimeout(setGarden(data), 5000)
-        console.log(data)
       })
       
   }
@@ -77,7 +76,7 @@ function App() {
   }
 
   const deletePlant = (plant) => {
-    fetch(url + "/garden/60ac1567b7cdcf1018e93c85/plants/:plantId", {
+    fetch(url + "/garden/60ac1567b7cdcf1018e93c85/plants/" + plant._id, {
       method: "delete",
     }).then(() => {
       getGarden()

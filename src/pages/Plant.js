@@ -1,12 +1,10 @@
 import React from "react";
 const Plant = (props) => {
-      
-    const { plant } = props
 
-     return <div className='individualPlant'>
-    
+    return (
+      <div className='individualPlant'>
         <article>
-          <img src={props.plant.species.img}/>
+          <img src={"data:image/png;base64," + props.plant.species.img.toString("base64")} alt={props.plant.species.type}/>
           <h1>{props.plant.name}</h1>
           <section className= "details">
           <h4>Frequency: {props.plant.species.frequency}</h4>
@@ -17,11 +15,12 @@ const Plant = (props) => {
           <form><h4>Description: {props.plant.species.description}</h4></form>
         </article>
         <button onClick={() => {
-            props.deletePlant(Plant)
+            props.deletePlant(props.plant)
           }}>
             Delete Plant
-          </button>
-    </div>
+        </button>
+      </div>
+    )
 }
 
 export default Plant
