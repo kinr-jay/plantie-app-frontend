@@ -126,7 +126,10 @@ function App() {
         />
         <Route
           path="/plant/:name"
-          render={(routerProps) => <Plant {...routerProps} />}
+          render={(routerProps) => <Plant {...routerProps}
+          plant={garden && garden.plants ? garden.plants[0] : emptyPlant }
+           deletePlant={deletePlant} 
+           />}
         />
           <Route
           path="/plant">
