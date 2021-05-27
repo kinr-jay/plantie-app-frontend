@@ -51,7 +51,7 @@ const AccountForm = ({ existingUser, label }) => {
          onChange={handleChange}
          value={formData.email}
          />
-         Email
+
     </div>
     <div>
    
