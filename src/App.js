@@ -12,7 +12,7 @@ import Team from "./pages/Team"
 import Plant from "./pages/Plant"
 import Nav from "./components/Nav"
 import AccountForm from './components/AccountForm';
-
+import LoginForm from './components/LoginForm'
 function App() {
   const url = "https://plantie-group-project.herokuapp.com"
   const [garden, setGarden] = useState([])
@@ -109,7 +109,7 @@ function App() {
         <Route
           path="/signin"
           render={(routerProps) => (
-            <AccountForm
+            <LoginForm
               {...routerProps}
             
             />

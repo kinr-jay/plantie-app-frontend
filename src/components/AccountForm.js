@@ -54,9 +54,7 @@ const AccountForm = ({ existingUser, label }) => {
         </div>
 
       <button className="signup-bttn">Sign Up</button>
-      <Link to="/signin">
-      <button className ="signin-bttn">Sign In</button>
-      </Link>
+    
     </form>
   )
 }
