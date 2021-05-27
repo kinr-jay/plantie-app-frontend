@@ -27,6 +27,8 @@ const LoginForm = (props) => {
           src="https://res.cloudinary.com/kinr-jay/image/upload/v1621966095/GA/plantie%20app/plantie-icon-vector_bjdb6k.svg"
           alt="plantie logo"
         />
+        <h1>plantie</h1>
+        <p>WELCOME BACK!</p>
       <input className="login-email"
         type="email"
         name="email"

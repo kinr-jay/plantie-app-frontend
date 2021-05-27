@@ -5,6 +5,16 @@
     align-items: center;
     font-family:$comfortaa;
 }
+h1 {
+    color: $dark-green;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: $comfortaa;
+}
+p {
+    margin: 20px 0;
+    width: 250px;
+}
 .signup-email {
     background-color:white;
     color: $less-black;
