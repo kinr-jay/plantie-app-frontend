@@ -55,9 +55,11 @@ const Profile = ({
         If you have any questions or need some help from the pant experts, just
         contact us.
       </p>
-      <button className="contact-btn">
-        <a href="mailto:plantie@plantie.plantie">Contact Us</a>
-      </button>
+      <a href="mailto:plantie@plantie.plantie">
+        <button className="contact-btn">
+          Contact Us
+        </button>
+      </a>
       <button className="logout-btn">Logout</button>
     </div>
   )

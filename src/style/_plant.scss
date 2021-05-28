@@ -7,28 +7,25 @@
   }
 }
 
-
 .individualPlant{
   padding-bottom: 5em;
   background-color: $lightest-green;
   height: 100vh;
 
 #plantImage {
-  width: 40%;
+  width: auto;
   height: 300px;
   padding-top: 15px;
   border-radius: 5%;
 }
 // name
 article h1 {
-text-align: left;
-padding-left: 30%;
+text-align: center;
 font-family: $comfortaa;
 }
 
 hr {
-    width: 70%;
-    
+  width: 70%;
 }
 
 // description and details font

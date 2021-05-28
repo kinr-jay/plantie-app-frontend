@@ -26,7 +26,7 @@ function TaskList(props) {
           <div className="plantcards" key={index}>
             <div
               className="imgcontainer"
-              style={{ backgroundImage: `url(${plant.species.img})` }}
+              style={{ backgroundImage: `url(${plant.img})` }}
             ></div>
             <div className="taskinfo">
               <h4>Name: {plant.name}</h4>
