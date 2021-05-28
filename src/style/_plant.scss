@@ -1,9 +1,23 @@
 @import "./variables.scss";
 
-article img {
+.plant-form {
+  img {
+    width: 400px;
+    height: auto;
+  }
+}
+
+
+.individualPlant{
+  padding-bottom: 5em;
+  background-color: $lightest-green;
+  height: 100vh;
+
+#plantImage {
   width: 40%;
-  height: 40%;
-  border-radius: 10px;
+  height: 300px;
+  padding-top: 15px;
+  border-radius: 5%;
 }
 // name
 article h1 {
@@ -24,14 +38,14 @@ article h4 {
 
 
 // description
-article form h4 {
+article .description h4 {
    width: 50%;
    margin: auto;
    line-height: 30px;
 }
 
 // button
-article button {
+button {
     padding: 5px 20px;
     margin: 10px;
     color: black;
@@ -40,16 +54,22 @@ article button {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 3px #999;
+
   }
 
-article button:hover {
+button:hover {
     color:white;
     background-color: grey;
   }
-article button:active {
+button:active {
     background-color: grey;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-
-
+// arrow back design
+.fa-customize {
+    color: gray;
+    margin-top: 10px;
+    padding-right: 50%;
+}
+}
