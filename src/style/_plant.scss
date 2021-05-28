@@ -45,23 +45,23 @@ article .description h4 {
 }
 
 // button
-button {
-    padding: 5px 20px;
-    margin: 10px;
-    color: black;
-    background-color: $light-peach;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
+article button {
+    height: 40px;
+    width: 15%;
+    border-radius: 20px;
+    background-color: darkgrey;
     cursor: pointer;
-    box-shadow: 0 3px #999;
-
+    font-weight: bolder;
+    border: 0;
+    margin: 10px;
+    
   }
 
-button:hover {
+article button:hover {
     color:white;
     background-color: grey;
   }
-button:active {
+article button:active {
     background-color: grey;
     box-shadow: 0 5px #666;
     transform: translateY(4px);

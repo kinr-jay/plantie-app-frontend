@@ -50,18 +50,18 @@ const Plant = ({plant, deletePlant, history}) => {
         <div className="description">
           <h4>Description: {plant.species.description}</h4>
         </div>
+        <button
+          onClick={() => {
+            deletePlant(plant)
+            history.push("/garden")
+          }}
+        >
+          Delete Plant <i class="fas fa-leaf">
+        </button>
+        <Link to="/edit-plant">
+          <button>Edit Plant <i class="fas fa-leaf"></button>
+        </Link>
       </article>
-      <button
-        onClick={() => {
-          deletePlant(plant)
-          history.push("/garden")
-        }}
-      >
-        Delete Plant
-      </button>
-      <Link to="/edit-plant">
-        <button>Edit Plant</button>
-      </Link>
     </div>
   )
 }

@@ -35,26 +35,37 @@ const AccountForm = ({ existingUser, label }) => {
         />
         <h1 className="accoutcreate">plantie</h1>
         <p className="ca">CREATE ACCOUNT</p>
-    <input className="signup-email" 
+
+      <div className="nameSignUp">
+        <h4>Name</h4>
+        <input className="signup-name"
+        type="text"
+        name="name"
+        />
+      </div>
+      <div className="emailSignUp">
+        <h4>Email Address</h4>
+            <input className="signup-email" 
          type="email"
          name="email"
          onChange={handleChange}
          value={formData.email}
          />
-
-    </div>
-    <div style= {{backgroundColor:"#FEF8F7"}}>
-        <input className="signup-password"
-        type="password"
-           name="password"
-           onChange={handleChange}
-           value={formData.password}
-        />
-   
-        </div>
-
-      <button className="signup-bttn">Sign Up</button>
+      </div>
     
+       <div className="passwordSignUp">
+         <h4>Password</h4>
+         <div style= {{backgroundColor:"#FEF8F7"}}>
+           <input className="signup-password"
+            type="password"
+             name="password"
+             onChange={handleChange}
+            value={formData.password}
+           />
+           </div>
+        </div>
+      <button className="signup-bttn">Sign Up</button>
+      </div>
     </form>
   )
 }

@@ -63,7 +63,7 @@ const PlantForm = (props) => {
       <div className="plantFormForm">
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Plant's Name </label> <br/>
+          <label htmlFor="name">What's your plant's name? </label> <br/>
           <input
             type="text"
             name="name"
@@ -73,7 +73,7 @@ const PlantForm = (props) => {
           />
         </div>
         <div>
-          <label htmlFor="birthday">Plant's Birthday </label><br/>
+          <label htmlFor="birthday">When did the plant join the family? </label><br/>
           <input
             type="date"
             name="birthday"
@@ -109,7 +109,7 @@ const PlantForm = (props) => {
             <img src={URL.createObjectURL(imageFile)} alt="plant preview" />
           )}
         </div>
-        <input type="submit" value={props.label} id="addToGarden" />
+        <input type="submit" value={props.label} id="addToGarden" /> 
       </form>
       </div>
     )
