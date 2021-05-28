@@ -1,14 +1,13 @@
 @import "./variables.scss";
 
-* {
-    box-sizing: border-box;
 
-}
+.individualPlant{
 
-img {
+article img {
   width: 40%;
   height: 40%;
-  border-radius: 10px;
+  padding-top: 15px;
+  border-radius: 5%;
 }
 // name
 article h1 {
@@ -23,13 +22,13 @@ hr {
 }
 
 // description and details font
- h4 {
+article h4 {
     font-family: $work-sans ;
 }
 
 
 // description
-form h4 {
+article form h4 {
    width: 50%;
    margin: auto;
    line-height: 30px;
@@ -51,10 +50,15 @@ button:hover {
     color:white;
     background-color: grey;
   }
-  button:active {
+button:active {
     background-color: grey;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-
-
+// arrow back design
+.fa-customize {
+    color: gray;
+    margin-top: 10px;
+    padding-right: 50%;
+}
+}

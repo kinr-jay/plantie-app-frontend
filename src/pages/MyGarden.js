@@ -5,6 +5,8 @@ import Drop from "../components/GardenDropdown"
 
 const MyGarden = (props) => {
 
+    const {plants} = props
+
     const [visable, setVisable] = useState(false)
 
     const handleVisable = () => {
@@ -16,6 +18,14 @@ const MyGarden = (props) => {
     
       }
 
+      const loaded = () => (
+        <h3>You have {plants.length} plants in your garden!</h3>
+      )
+
+      const loading = () => (
+        <h3>You have no plants in your garden!</h3>
+      )
+
     return (
         <div className = "garden">
             <DropButton
@@ -23,9 +33,9 @@ const MyGarden = (props) => {
             <Drop
             visable={visable}/>
             <h1>My Plants</h1>
-            <h3>You have # plants in your garden!</h3>
+            {plants? loaded (): loading ()}
             <PlantList
-            plants={props.plants}
+            plants={plants}
             setSelectedPlant= {props.setSelectedPlant}
             />
         </div>

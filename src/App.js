@@ -155,6 +155,7 @@ function App() {
         />
         <Route
           path="/plant/:name"
+
           render={(routerProps) => (
             <Plant
               {...routerProps}
