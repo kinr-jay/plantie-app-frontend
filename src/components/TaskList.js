@@ -1,33 +1,51 @@
 // import React from 'react';
 import Task from "./Task" 
 
-function TaskList (props) {
-const loaded = () => (
-  <div className="plantlist">
-    {props.plants.map((plant, index) => (
-      <div className="plantcards" key={index}>
-      <img className="imgbg" src={plant.species.img} onClick={()=> ""} alt={plant.species.type}/>
-      <h4>Name: {plant.name}</h4>
-      <h4>Birthday: {plant.birthday}</h4>
-      <h4>Last Watered: {plant.lastWatered}</h4>
-      </div>
-    
-    ))}
-    
-  </div>
-)  
+function TaskList(props) {
 
+  const loaded = () => {
+    
+    props.plants.sort((plant1, plant2) => {
+      let lastWatered1 = new Date(plant1.lastWatered)
+      let lastWatered2 = new Date(plant2.lastWatered)
+      let today = new Date()
+      let daysTilWatering1 = Math.round((today - lastWatered1)/1000/86400)
+      console.log(daysTilWatering1)
+      let daysTilWatering2 = Math.round((today - lastWatered2)/1000/86400)
+      console.log(daysTilWatering2)
+      return daysTilWatering1-daysTilWatering2
+    })
+    console.log(props.plants)
+    
+    return (
+    <div className="plantlist">
+      {props.plants.map((plant, index) => (
+        <div className="plantcards" key={index}>
+          <img
+            className="imgbg"
+            src={plant.species.img}
+            onClick={() => ""}
+            alt={plant.species.type}
+          />
+          <h4>Name: {plant.name}</h4>
+          <h4>Birthday: {plant.birthday}</h4>
+          <h4>Last Watered: {plant.lastWatered}</h4>
+        </div>
+      ))}
+    </div>
+  )}
 
-const loading = () => {
-  return  <h1> Loading . . . .</h1>
+  const loading = () => {
+    return <h1> Loading . . . .</h1>
   }
-  
+
   return (
     <div>
       {props.plants ? loaded() : loading()};
-        <Task/>
+      <Task />
     </div>
-  )}
+  )
+}
 
 export default TaskList;
 
