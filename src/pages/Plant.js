@@ -8,7 +8,7 @@ const Plant = (props) => {
             <i class="fas fa-chevron-circle-left fa-20px fa-customize"></i>
         </Link>
         <article>
-          <img src={props.plant.species.img} alt="plantimage"/>
+          <img src={props.plant.species.img} alt="plantimage" id="plantImage"/>
           <h1>{props.plant.name}</h1>
           <section className= "details">
             <h4>
@@ -23,20 +23,25 @@ const Plant = (props) => {
             </h4>
           </section>
           <hr />
-          <form>
+          <div className="description">
             <h4>Description: {props.plant.species.description}</h4>
-          </form>
+            </div>
         </article>
         <button onClick={() => {
             props.deletePlant(props.plant)
-            props.history.push("/garden")
+
+                props.history.push("/garden") 
+            
+
           }}>
             Delete Plant
         </button>
-        <button>Edit Plant
-            {/* {props.history.push("/edit-plant")}Edit Plant */}
-            {/* <link>{props.history.push("/edit-plant")}Edit Plant</link> */}
-        </button>
+        <Link to="/edit-plant">
+            <button>Edit Plant</button>
+        </Link>
+        {/* <button>Edit Plant
+            {props.history.push("/edit-plant")}Edit Plant
+        </button> */}
         
     </div>
 }

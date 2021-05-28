@@ -60,9 +60,10 @@ const PlantForm = (props) => {
 
   const loaded = () => {
     return (
+      <div className="plantFormForm">
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Plant's Name: </label>
+          <label htmlFor="name">Plant's Name </label> <br/>
           <input
             type="text"
             name="name"
@@ -72,7 +73,7 @@ const PlantForm = (props) => {
           />
         </div>
         <div>
-          <label htmlFor="birthday">Plant's Birthday: </label>
+          <label htmlFor="birthday">Plant's Birthday </label><br/>
           <input
             type="date"
             name="birthday"
@@ -82,7 +83,7 @@ const PlantForm = (props) => {
           />
         </div>
         <div>
-          <label htmlFor="species">Select your Plant's species: </label>
+          <label htmlFor="species">Select your Plant's species </label><br/>
           <select name="species" id="species" onChange={handleOptionChange}>
             <option value="select-a-plant">Select a Plant</option>
             {species.map((species, index) => (
@@ -93,7 +94,7 @@ const PlantForm = (props) => {
           </select>
         </div>
         <div>
-          <label htmlFor="img">Add A Photo (PNG or JPEG)</label>
+          <label htmlFor="img" id="image">Add A Photo (PNG or JPEG)</label>
           <input
             style={{ opacity: 0, height: "1px", width: "1px" }}
             type="file"
@@ -108,8 +109,9 @@ const PlantForm = (props) => {
             <img src={URL.createObjectURL(imageFile)} alt="plant preview" />
           )}
         </div>
-        <input type="submit" value={props.label} />
+        <input type="submit" value={props.label} id="addToGarden" />
       </form>
+      </div>
     )
   }
 
