@@ -29,18 +29,25 @@ const LoginForm = (props) => {
         />
         <h1 className="welcomeback">plantie</h1>
         <p className="wb">WELCOME BACK!</p>
-      <input className="login-email"
-        type="email"
-        name="email"
-        onChange={handleChange}
-        value={formData.email}
-      />
-      <input className="login-pw"
-        type="password"
-        name="password"
-        onChange={handleChange}
-        value={formData.password}
-      />
+
+        <div className="emailAddress">
+            <h4 >Email Address</h4>
+         <input className="login-email"
+          type="email"
+          name="email"
+          onChange={handleChange}
+          value={formData.email}
+          />
+        </div>
+        <div className="passwordText">
+          <h4>Password</h4>
+         <input className="login-pw"
+          type="password"
+          name="password"
+          onChange={handleChange}
+          value={formData.password}
+         />
+        </div>
       </div>
       <button className="signin-bttn"> Sign In</button>
     </form>
@@ -48,3 +55,6 @@ const LoginForm = (props) => {
 }
 
 export default LoginForm
+
+
+{/* <label htmlFor="birthday">When did the plant join the family? </label><br/> */}
