@@ -18,8 +18,8 @@ import LoginForm from './components/LoginForm'
 import { format } from "date-fns"
 
 function App() {
-  // const url = "https://plantie-group-project.herokuapp.com"
-  const url = "http://localhost:4500"
+  const url = "https://plantie-group-project.herokuapp.com"
+//   const url = "http://localhost:4500"
   const cloudinary = "https://api.Cloudinary.com/v1_1/kinr-jay/image/upload"
   const [garden, setGarden] = useState([])
   const todaysDateFormatted = format(new Date(), "MM-dd-yyyy")
