@@ -23,21 +23,23 @@ const Plant = (props) => {
             </h4>
           </section>
           <hr />
-          <form>
+          <div className="description">
             <h4>Description: {props.plant.species.description}</h4>
-          </form>
+            </div>
         </article>
         <button onClick={() => {
-            props.deletePlant(props.plant); {
+            props.deletePlant(props.plant)
                 props.history.push("/garden") 
-            }
+            
           }}>
             Delete Plant
         </button>
-        <button>Edit Plant
+
+         {/* <button>Edit Plant */}
+
             {/* {props.history.push("/edit-plant")}Edit Plant */}
             {/* <link>{props.history.push("/edit-plant")}Edit Plant</link> */}
-        </button>
+        {/* </button>  */}
         
     </div>
 }

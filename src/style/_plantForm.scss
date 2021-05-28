@@ -1,2 +1,59 @@
 // @import "./variables.scss"
 
+.plantFormForm {
+// form {
+//     padding: 25px;
+// }
+
+form div {
+    padding: 15px;
+}
+
+#name {
+    height: 30px;
+    width: 25%;
+    border-radius: 10px;
+    margin-left: 10px;
+ 
+
+}
+
+#birthday {
+    height: 30px;
+    width: 25%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+#species {
+    height: 30px;
+    width: 25%;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+#image {
+    border :1px solid black;
+    padding: 10px 60px;
+    border-radius: 5px;
+    background-color:#EFEFEF;
+    cursor: pointer;
+    height: 40px;
+  
+}
+#image:hover {
+    color: white;
+    background-color: darkgrey;
+}
+#addToGarden {
+    height: 40px;
+    width: 25%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#addToGarden:hover {
+    color: white;
+    background-color: darkgrey;
+}
+
+}

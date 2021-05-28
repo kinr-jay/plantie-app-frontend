@@ -3,6 +3,9 @@
 
 .individualPlant{
 
+article {
+    padding-bottom: 5em;
+}
 article img {
   width: 40%;
   height: 40%;
@@ -28,7 +31,7 @@ article h4 {
 
 
 // description
-article form h4 {
+article .description h4 {
    width: 50%;
    margin: auto;
    line-height: 30px;
