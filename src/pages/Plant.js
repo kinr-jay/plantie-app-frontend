@@ -56,10 +56,10 @@ const Plant = ({plant, deletePlant, history}) => {
             history.push("/garden")
           }}
         >
-          Delete Plant <i class="fas fa-leaf">
+          Delete Plant <i class="fas fa-leaf"></i>
         </button>
         <Link to="/edit-plant">
-          <button>Edit Plant <i class="fas fa-leaf"></button>
+          <button>Edit Plant <i class="fas fa-leaf"></i></button>
         </Link>
       </article>
     </div>
