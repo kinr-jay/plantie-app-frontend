@@ -34,12 +34,12 @@ const Plant = (props) => {
           }}>
             Delete Plant
         </button>
-
-         {/* <button>Edit Plant */}
-
-            {/* {props.history.push("/edit-plant")}Edit Plant */}
-            {/* <link>{props.history.push("/edit-plant")}Edit Plant</link> */}
-        {/* </button>  */}
+        <Link to="/edit-plant">
+            <button>Edit Plant</button>
+        </Link>
+        {/* <button>Edit Plant
+            {props.history.push("/edit-plant")}Edit Plant
+        </button> */}
         
     </div>
 }
