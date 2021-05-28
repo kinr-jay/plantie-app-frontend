@@ -60,7 +60,7 @@ const PlantForm = (props) => {
 
   const loaded = () => {
     return (
-      <form onSubmit={handleSubmit}>
+      <form className="plant-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Plant's Name: </label>
           <input

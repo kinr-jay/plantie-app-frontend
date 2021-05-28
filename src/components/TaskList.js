@@ -1,41 +1,46 @@
 // import React from 'react';
-import Task from "./Task" 
+// import Task from "./Task" 
 // import React, { useState, useEffect } from "react";
+import format from "date-fns/format"
 
 
 function TaskList(props) {
+  
 
   const loaded = () => {
-    
-    props.plants.sort((plant1, plant2) => {
-      let lastWatered1 = new Date(plant1.lastWatered)
-      let lastWatered2 = new Date(plant2.lastWatered)
-      let today = new Date()
-      let daysTilWatering1 = Math.round((today - lastWatered1)/1000/86400)
-      console.log(daysTilWatering1)
-      let daysTilWatering2 = Math.round((today - lastWatered2)/1000/86400)
-      console.log(daysTilWatering2)
-      return daysTilWatering1-daysTilWatering2
+    let today = new Date()
+
+    props.plants.map((plant) => {
+      let lastWatered = new Date(plant.lastWatered)
+      let daysTilWatering = 
+        Math.round((today - lastWatered) / 1000 / 86400) + plant.species.frequency
+      plant.daysTilWatering = daysTilWatering
+      return plant
     })
-    console.log(props.plants)
-    
+
+    props.plants.sort((plant1, plant2) => {
+      return plant1.daysTilWatering - plant2.daysTilWatering
+    })
+
     return (
-    <div className="plantlist">
-      {props.plants.map((plant, index) => (
-        <div className="plantcards" key={index}>
-          <img
-            className="imgbg"
-            src={plant.species.img}
-            onClick={() => ""}
-            alt={plant.species.type}
-          />
-          <h4>Name: {plant.name}</h4>
-          <h4>Birthday: {plant.birthday}</h4>
-          <h4>Last Watered: {plant.lastWatered}</h4>
-        </div>
-      ))}
-    </div>
-  )}
+      <div className="plantlist">
+        {props.plants.map((plant, index) => (
+          <div className="plantcards" key={index}>
+            <img
+              className="imgbg"
+              src={plant.species.img}
+              onClick={() => ""}
+              alt={plant.species.type}
+            />
+            <h4>Name: {plant.name}</h4>
+            {/* <h4>Birthday: {plant.birthday}</h4> */}
+            <h4>Next Watering: {plant.daysTilWatering} days</h4>
+            <h4>Last Watered: {format(new Date(plant.lastWatered), "MMM, dd")}</h4>
+          </div>
+        ))}
+      </div>
+    )
+  }
 
   const loading = () => {
     return <h1> Loading . . . .</h1>
@@ -43,8 +48,7 @@ function TaskList(props) {
 
   return (
     <div>
-      {props.plants ? loaded() : loading()};
-      <Task />
+      {props.plants ? loaded() : loading()};{/* <Task /> */}
     </div>
   )
 }

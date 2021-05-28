@@ -1,7 +1,15 @@
 @import "./variables.scss";
 
+.plant-form {
+  img {
+    width: 400px;
+    height: auto;
+  }
+}
+
 
 .individualPlant{
+  padding-bottom: 5em;
 
 article img {
   width: 40%;
