@@ -10,10 +10,12 @@
 
 .individualPlant{
   padding-bottom: 5em;
+  background-color: $lightest-green;
+  height: 100vh;
 
-article img {
+#plantImage {
   width: 40%;
-  height: 40%;
+  height: 300px;
   padding-top: 15px;
   border-radius: 5%;
 }
@@ -36,7 +38,7 @@ article h4 {
 
 
 // description
-article form h4 {
+article .description h4 {
    width: 50%;
    margin: auto;
    line-height: 30px;
@@ -52,6 +54,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 3px #999;
+
   }
 
 button:hover {
