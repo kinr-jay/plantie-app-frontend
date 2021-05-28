@@ -3,6 +3,7 @@
 .garden {
     background-color:$lightest-green; 
     font-family: $comfortaa;
+    height: 100vh;
 }
 .plantlist {
     display: flex;
@@ -104,23 +105,3 @@
         
     }
 }
-
-// responsive design for tablet display 
-@media screen and (min-width: 768px) {
-    .plantlist{
-        // display: flex;
-        // flex-direction: row;
-        // flex-wrap: wrap;
-        // display: grid;
-        // grid-template-columns: repeat(3, 1fr);
-    }
-
-}
-
-// // responsive design for desktop 
-// @media screen and (min-width: 1024px) {
-//     .plantlist{
-//         display: grid;
-//         grid-template-columns: repeat(4, 1fr)
-//     }
-// }

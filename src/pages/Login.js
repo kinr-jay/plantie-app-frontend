@@ -11,14 +11,11 @@ const Login = () => {
         <h1>plantie</h1>
         <p>Welcome! We will help you to take care of your plants!</p>
         <Link to="/signup">
-        <button className="sign-up">Sign up</button>
+              <button className="sign-up">Sign up</button>
         </Link>
         <Link to="/signin">
-        <button className="log-in">Log in</button>
+              <button className="log-in">Log in</button>
         </Link>
-        {/* <p>or use</p>
-        <button className="third-party-auth"></button>
-        <button className="third-party-auth"></button> */}
       </div>
     )
 }

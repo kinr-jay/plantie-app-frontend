@@ -111,15 +111,15 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/">
+          <Login />
+        </Route>
+        <Route path="/tasks">
           <Home
             plants={garden.plants}
             selectPlant={selectPlant}
             deletePlant={deletePlant}
             setSelectedPlant={setSelectedPlant}
           />
-        </Route>
-        <Route path="/login">
-          <Login />
         </Route>
         <Route
           path="/signup"

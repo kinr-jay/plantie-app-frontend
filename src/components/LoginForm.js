@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 
 const LoginForm = (props) => {
   const [formData, setFormData] = useState({
@@ -32,24 +33,26 @@ const LoginForm = (props) => {
 
         <div className="emailAddress">
             <h4 >Email Address</h4>
-         <input className="login-email"
-          type="email"
-          name="email"
-          onChange={handleChange}
-          value={formData.email}
+          <input className="login-email"
+            type="email"
+            name="email"
+            onChange={handleChange}
+            value={formData.email}
           />
         </div>
         <div className="passwordText">
           <h4>Password</h4>
-         <input className="login-pw"
-          type="password"
-          name="password"
-          onChange={handleChange}
-          value={formData.password}
-         />
+          <input className="login-pw"
+            type="password"
+            name="password"
+            onChange={handleChange}
+            value={formData.password}
+          />
         </div>
       </div>
-      <button className="signin-bttn"> Sign In</button>
+      <Link to="/tasks">
+        <button className="signin-bttn"> Sign In</button>
+      </Link>
     </form>
   )
 }
