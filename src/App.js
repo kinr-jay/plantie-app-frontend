@@ -13,14 +13,21 @@ import Plant from "./pages/Plant"
 import Nav from "./components/Nav"
 import AccountForm from './components/AccountForm';
 import LoginForm from './components/LoginForm'
+
+// date-fns imports
+import { format } from "date-fns"
+
 function App() {
-  const url = "https://plantie-group-project.herokuapp.com"
-  // const url = "http://localhost:4500"
+  // const url = "https://plantie-group-project.herokuapp.com"
+  const url = "http://localhost:4500"
   const cloudinary = "https://api.Cloudinary.com/v1_1/kinr-jay/image/upload"
   const [garden, setGarden] = useState([])
+  const todaysDateFormatted = format(new Date(), "MM-dd-yyyy")
+  console.log("today's date", todaysDateFormatted)
+
   const emptyPlant = {
     birthday: "2021-05-24",
-    lastWatered: "2021-05-24",
+    lastWatered: todaysDateFormatted,
     name: "",
     img: "",
     species: {
@@ -152,7 +159,6 @@ function App() {
         />
         <Route
           path="/plant/:name"
-
           render={(routerProps) => (
             <Plant
               {...routerProps}

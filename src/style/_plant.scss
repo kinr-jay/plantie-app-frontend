@@ -1,9 +1,17 @@
 @import "./variables.scss";
 
+.plant-form {
+  img {
+    width: 400px;
+    height: auto;
+  }
+}
+
 
 .individualPlant{
-    background-color: $lightest-green;
-    height: 100vh;
+  padding-bottom: 5em;
+  background-color: $lightest-green;
+  height: 100vh;
 
 #plantImage {
   width: 40%;
