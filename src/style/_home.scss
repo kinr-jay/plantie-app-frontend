@@ -16,6 +16,7 @@
 .tt{
     background-color: $light-peach;
     font-family: $comfortaa;
+    height: 100vh;
 }
 .plantcards {
     display: grid;
@@ -30,6 +31,17 @@
     border: solid;
     border-color: $light-peach;
     box-shadow: 0 4px 8px 0 $dark-peach, 0 6px 20px 0 $light-peach;
+    max-width: 500px;
+
+    .imgcontainer{
+        height: 2em;
+        width: 2em;
+        grid-column: 1/2;
+        border-radius: 5px;
+        background-size: cover;
+        background-position: center;
+
+    }
 
     svg {  
         grid-column: 3/4; 
@@ -38,13 +50,13 @@
         margin-right: 20px;
         color: $light-blue;
     }
-    .imgbg {
+    // .imgbg {
 
-        grid-column: 1/2;
-        height:2em;
-        width:10vw;
-        border-radius: 5px;
-    }
+      
+    //     height:2em;
+    //     width: auto;
+      
+    // }
 
     h4 {
         margin: 0px;

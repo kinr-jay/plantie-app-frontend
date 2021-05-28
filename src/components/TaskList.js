@@ -12,7 +12,9 @@ const loaded = () => (
     {props.plants.map((plant, index) => (
 
      <div className="plantcards" key={index}>
-     <img className="imgbg" src={plant.species.img} onClick={()=> ""} alt={plant.species.type}/>
+       <div className="imgcontainer" style={{backgroundImage: `url(${plant.species.img})`}}>
+     {/* <img className="imgbg" src={plant.species.img} onClick={()=> ""} alt={plant.species.type}/> */}
+     </div>
      <div className="taskinfo">
      <h4>Name: {plant.name}</h4>
      <h4>Last Watered: {plant.lastWatered}</h4>
