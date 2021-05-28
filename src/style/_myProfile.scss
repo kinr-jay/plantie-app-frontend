@@ -1,0 +1,53 @@
+@import "./variables.scss";
+
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $work-sans;
+
+    .toggle {
+        background: none;
+        border: none;
+    }
+
+    h2 {
+        font-family: $comfortaa;
+    }
+
+    p {
+        max-width: 500px;
+    }
+}
+
+.profile-dd {
+    width: 300px;
+}
+
+.profile-dd-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+#dd-content {
+    padding-left: 5px;
+    text-align: left;
+}
+
+.contact-btn, .logout-btn {
+    color: white;
+    font-weight: 600;
+    padding: 8px 50px;
+    margin: 5px 0;
+    border-radius: 20px;
+    border: 0;
+    width: 200px;
+}
+
+.contact-btn {
+    background-color: $dark-green;
+}
+
+.logout-btn {
+    background-color: $light-green;
+}

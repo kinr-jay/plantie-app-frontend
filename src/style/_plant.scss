@@ -1,0 +1,75 @@
+@import "./variables.scss";
+
+.plant-form {
+  img {
+    width: 400px;
+    height: auto;
+  }
+}
+
+
+.individualPlant{
+  padding-bottom: 5em;
+  background-color: $lightest-green;
+  height: 100vh;
+
+#plantImage {
+  width: 40%;
+  height: 300px;
+  padding-top: 15px;
+  border-radius: 5%;
+}
+// name
+article h1 {
+text-align: left;
+padding-left: 30%;
+font-family: $comfortaa;
+}
+
+hr {
+    width: 70%;
+    
+}
+
+// description and details font
+article h4 {
+    font-family: $work-sans ;
+}
+
+
+// description
+article .description h4 {
+   width: 50%;
+   margin: auto;
+   line-height: 30px;
+}
+
+// button
+button {
+    padding: 5px 20px;
+    margin: 10px;
+    color: black;
+    background-color: $light-peach;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+
+  }
+
+button:hover {
+    color:white;
+    background-color: grey;
+  }
+button:active {
+    background-color: grey;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+// arrow back design
+.fa-customize {
+    color: gray;
+    margin-top: 10px;
+    padding-right: 50%;
+}
+}
