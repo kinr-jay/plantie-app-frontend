@@ -1,12 +1,17 @@
-// @import "./variables.scss"
+@import "./variables.scss";
 
 .plantFormForm {
 // form {
 //     padding: 25px;
 // }
 
+form {
+    background-color: $lightest-green;
+    height: 100vh;
+}
 form div {
     padding: 15px;
+
 }
 // title of the inputes
 label {

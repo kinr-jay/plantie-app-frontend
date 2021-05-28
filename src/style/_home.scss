@@ -1,6 +1,6 @@
 @import "./variables.scss";
 .plantcards {
-    // display: grid;
+    display: grid;
     background-color: white;
     height: 250px;
     width: 30vw;
@@ -26,19 +26,3 @@
     }
    
 }
-// // responsive design for tablet display 
-// @media screen and (min-width: 768px) {
-//     .plantlist{
-//         display: grid;
-//         grid-template-columns: repeat(3, 1fr);
-//     }
-
-// }
-
-// // responsive design for desktop 
-// @media screen and (min-width: 1024px) {
-//     .plantlist{
-//         display: grid;
-//         grid-template-columns: repeat(4, 1fr)
-//     }
-// }
