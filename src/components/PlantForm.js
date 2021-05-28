@@ -46,7 +46,7 @@ const PlantForm = (props) => {
     let file = event.target.files[0]
     const reader = new FileReader()
     reader.onloadend = () => {
-      console.log(typeof reader.result)
+      // console.log("RESULT", reader.result)
       setFormData({ ...formData, img: reader.result })
     }
     reader.readAsDataURL(file)
