@@ -1,18 +1,26 @@
 // import React from 'react';
 import Task from "./Task" 
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faTint} from "@fortawesome/free-solid-svg-icons"
+
 // import React, { useState, useEffect } from "react";
 
 
 function TaskList (props) {
 const loaded = () => (
-  <div className="plantlist">
+  <div className="tasklist">
     {props.plants.map((plant, index) => (
-      <div className="plantcards" key={index}>
-      <img className="imgbg" src={plant.species.img} onClick={()=> ""} alt={plant.species.type}/>
-      <h4>Name: {plant.name}</h4>
-      <h4>Birthday: {plant.birthday}</h4>
-      <h4>Last Watered: {plant.lastWatered}</h4>
-      </div>
+
+     <div className="plantcards" key={index}>
+     <img className="imgbg" src={plant.species.img} onClick={()=> ""} alt={plant.species.type}/>
+     <div className="taskinfo">
+     <h4>Name: {plant.name}</h4>
+     <h4>Last Watered: {plant.lastWatered}</h4>
+     </div>
+     <FontAwesomeIcon icon={faTint}/>
+
+     </div>
+
     
     ))}
     
@@ -26,9 +34,12 @@ const loading = () => {
   
   return (
     <div>
-      {props.plants ? loaded() : loading()};
-        <Task/>
-    </div>
+
+    {props.plants ? loaded() : loading()}
+   
+  <Task/>
+  </div>
+
   )}
 
 export default TaskList;

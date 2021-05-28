@@ -29,8 +29,10 @@ const Plant = (props) => {
         </article>
         <button onClick={() => {
             props.deletePlant(props.plant)
+
                 props.history.push("/garden") 
             
+
           }}>
             Delete Plant
         </button>

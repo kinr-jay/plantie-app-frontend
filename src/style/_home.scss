@@ -1,27 +1,55 @@
 @import "./variables.scss";
+// *{
+//     border: 1px solid black;
+// }
+.tasklist{
+    padding-bottom: 5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    position: center;
+    justify-items: center;
+  
+
+}
+.tt{
+    background-color: $light-peach;
+    font-family: $comfortaa;
+}
 .plantcards {
     display: grid;
     background-color: white;
-    height: 250px;
-    width: 30vw;
-    justify-content: center;
+    grid-template-rows: auto;
+    grid-template-columns:1fr 1fr 1fr;
+    height: 3em;
+    width: 90vw;
+    justify-items: center;
+    align-content: center;
     border-radius: 20px;
     border: solid;
     border-color: $light-peach;
     box-shadow: 0 4px 8px 0 $dark-peach, 0 6px 20px 0 $light-peach;
 
+    svg {  
+        grid-column: 3/4; 
+        font-size: 2em;
+        justify-self: right;
+        margin-right: 20px;
+        color: $light-blue;
+    }
     .imgbg {
-        height:150px;
-        border-radius: 20px;
-        width: 25vw;
-        margin: 20px;
-        justify-content: center;
+
+        grid-column: 1/2;
+        height:2em;
+        width:10vw;
+        border-radius: 5px;
     }
 
     h4 {
         margin: 0px;
         font-family:$work-sans;
-        font-size: 12px;
+        font-size: .5em;
        text-align: center;
     }
    
