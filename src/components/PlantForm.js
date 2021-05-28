@@ -63,7 +63,7 @@ const PlantForm = (props) => {
       <div className="plantFormForm">
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Plant's Name: </label>
+          <label htmlFor="name">Plant's Name </label> <br/>
           <input
             type="text"
             name="name"
@@ -73,7 +73,7 @@ const PlantForm = (props) => {
           />
         </div>
         <div>
-          <label htmlFor="birthday">Plant's Birthday: </label>
+          <label htmlFor="birthday">Plant's Birthday </label><br/>
           <input
             type="date"
             name="birthday"
@@ -83,7 +83,7 @@ const PlantForm = (props) => {
           />
         </div>
         <div>
-          <label htmlFor="species">Select your Plant's species: </label>
+          <label htmlFor="species">Select your Plant's species </label><br/>
           <select name="species" id="species" onChange={handleOptionChange}>
             <option value="select-a-plant">Select a Plant</option>
             {species.map((species, index) => (

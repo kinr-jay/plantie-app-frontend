@@ -8,33 +8,34 @@
 form div {
     padding: 15px;
 }
-
+// title of the inputes
+label {
+    font-weight:bold;
+}
 #name {
     height: 30px;
-    width: 25%;
-    border-radius: 10px;
-    margin-left: 10px;
- 
-
+    width: 40%;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 #birthday {
     height: 30px;
     width: 25%;
-    border-radius: 10px;
-    margin-left: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 #species {
     height: 30px;
     width: 25%;
-    border-radius: 10px;
-    margin-left: 10px;
+    border-radius: 5px;
     margin-bottom: 40px;
+    margin-top: 10px;
 }
-
+// add a photo button
 #image {
     border :1px solid black;
-    padding: 10px 60px;
+    padding: 10px 70px;
     border-radius: 5px;
     background-color:#EFEFEF;
     cursor: pointer;
@@ -45,11 +46,13 @@ form div {
     color: white;
     background-color: darkgrey;
 }
+// Add to Garden button or Update Plant button. depends on what router you are. 
 #addToGarden {
     height: 40px;
     width: 25%;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bolder;
 }
 #addToGarden:hover {
     color: white;

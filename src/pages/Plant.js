@@ -8,7 +8,7 @@ const Plant = (props) => {
             <i class="fas fa-chevron-circle-left fa-20px fa-customize"></i>
         </Link>
         <article>
-          <img src={props.plant.species.img} alt="plantimage"/>
+          <img src={props.plant.species.img} alt="plantimage" id="plantImage"/>
           <h1>{props.plant.name}</h1>
           <section className= "details">
             <h4>
