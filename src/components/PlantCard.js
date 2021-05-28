@@ -6,10 +6,9 @@ const handleSelected = ()=> {
     }
 
     return (
-
       <Link to={`/plant/${plant.name}`}>
         <div className="plantcard" onClick={handleSelected}>
-          <img src={plant.species.img} alt={plant.species.type} />
+          <img src={plant.img} alt={plant.species.type} />
           <h2>{plant.name}</h2>
           <h4>{plant.species.type}</h4>
         </div>

@@ -18,32 +18,31 @@ const Plant = ({plant, deletePlant, history}) => {
         <i class="fas fa-chevron-circle-left fa-20px fa-customize"></i>
       </Link>
       <article>
-        <img
-          src={plant.species.img}
-          alt="plantimage"
-          id="plantImage"
-        />
+        <img src={plant.img} alt="plantimage" id="plantImage" />
         <h1>{plant.name}</h1>
         <section className="details">
           <h4>
-            <i class="fas fa-sun"></i> Sunlight:{" "}
-            {plant.species.sunlight}
+            <i class="fas fa-sun"></i> Sunlight: {plant.species.sunlight}
           </h4>
           <h4>
             <i class="fas fa-temperature-high"></i> Temperature:{" "}
-            {plant.species.temperature.min} -{" "}
-            {plant.species.temperature.max}
+            {plant.species.temperature.min} - {plant.species.temperature.max}
           </h4>
           <h4>
-            <i class="far fa-calendar"></i>{" "}
-            Watering Frequency: Every {plant.species.frequency} Days
+            <i class="far fa-calendar"></i> Watering Frequency: Every{" "}
+            {plant.species.frequency} Days
           </h4>
           {waterOverdue ? (
-            <h4><i class="fas fa-exclamation-circle"></i> Watering is {daysTilWatering} overdue!</h4>
+            <h4>
+              <i class="fas fa-exclamation-circle"></i> Watering is{" "}
+              {daysTilWatering} overdue!
+            </h4>
           ) : (
-            <h4><i class="fas fa-tint"></i> Next Watering in {Math.abs(daysTilWatering)} days</h4>
-          )
-          }
+            <h4>
+              <i class="fas fa-tint"></i> Next Watering in{" "}
+              {Math.abs(daysTilWatering)} days
+            </h4>
+          )}
         </section>
         <hr />
         <div className="description">
@@ -58,7 +57,9 @@ const Plant = ({plant, deletePlant, history}) => {
           Delete Plant <i class="fas fa-leaf"></i>
         </button>
         <Link to="/edit-plant">
-          <button>Edit Plant <i class="fas fa-leaf"></i></button>
+          <button>
+            Edit Plant <i class="fas fa-leaf"></i>
+          </button>
         </Link>
       </article>
     </div>
