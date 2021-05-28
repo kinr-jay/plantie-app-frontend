@@ -1,67 +1,79 @@
 @import "./variables.scss";
 
 .plantFormForm {
-// form {
-//     padding: 25px;
-// }
-
-form {
+    padding-bottom: 15em;
     background-color: $lightest-green;
     height: 100vh;
-}
-form div {
-    padding: 15px;
 
-}
-// title of the inputes
-label {
-    font-weight:bold;
-}
-#name {
-    height: 30px;
-    width: 40%;
-    border-radius: 5px;
-    margin-top: 10px;
-}
+    form div {
+        padding: 15px;
 
-#birthday {
-    height: 30px;
-    width: 25%;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-#species {
-    height: 30px;
-    width: 25%;
-    border-radius: 5px;
-    margin-bottom: 40px;
-    margin-top: 10px;
-}
-// add a photo button
-#image {
-    border :1px solid black;
-    padding: 10px 70px;
-    border-radius: 5px;
-    background-color:#EFEFEF;
-    cursor: pointer;
-    height: 40px;
-  
-}
-#image:hover {
-    color: white;
-    background-color: darkgrey;
-}
-// Add to Garden button or Update Plant button. depends on what router you are. 
-#addToGarden {
-    height: 40px;
-    width: 25%;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bolder;
-}
-#addToGarden:hover {
-    color: white;
-    background-color: darkgrey;
-}
+    }
+    // title of the inputes
+    label {
+        font-weight:bold;
+        font-family:$work-sans;
+    }
+    #name {
+        height: 30px;
+        width: 38%;
+        border-radius: 20px;
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+
+    #birthday {
+        height: 30px;
+        width: 37%;
+        border-radius: 20px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    // select your plant species
+    #species {
+        height: 30px;
+        width: 35%;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-left: 10px;
+    }
+    // add a photo button
+    #image {
+        border :1px solid black;
+        margin-top: 0;
+        padding: 10px 60px;
+        border-radius: 20px;
+        background-color:#EFEFEF;
+        cursor: pointer;
+        height: 40px;
+        font-size: 14px;
+        width: 25%;
+    
+    }
+    #image:hover {
+        color: white;
+        background-color: darkgrey;
+    }
+    // Add to Garden button or Update Plant button. depends on what router you are. 
+    #addToGarden {
+        height: 40px;
+        width: 25%;
+        border-radius: 20px;
+        background-color: darkgrey;
+        cursor: pointer;
+        font-weight: bolder;
+        border: 0;
+    }
+    #addToGarden:hover {
+        color: white;
+        background-color: darkgrey;
+    }
+
+    img {
+        width: 500px;
+        height: auto;
+    }
 
 }

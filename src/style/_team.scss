@@ -1,0 +1,78 @@
+@import "./variables.scss";
+
+
+.teamPage {
+    background-color: rgb(174, 215, 228);
+    font-family: $comfortaa;
+    padding-bottom: 5em;
+}
+
+.bios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    justify-items: center;
+    font-family: $work-sans;
+
+    
+}
+
+.even {
+    display: flex;
+    height: 250px;
+    width: 500px;
+    border: 3px solid $light-green;
+    background-color: $light-green;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    margin: 0;
+    img {
+        height: 160px;
+        width: auto;
+        border-radius: 50%;
+        border: 8px solid $dark-peach;
+        
+    }
+    h1 {
+        font-size: 1em;
+    }
+    p {
+        font-size: .7em;
+        padding: 5px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+.odd {
+    display: flex;
+    justify-items:right;
+    height: 250px;
+    width: 500px;
+    border: 3px solid $light-green;
+    background-color: $light-green;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    margin: 20px;
+    img {
+        height: 160px;
+        width: auto;
+        border-radius: 50%;
+        border: 8px solid $dark-peach;
+    }
+    h1 {
+        font-size: 1em;
+    }
+    p {
+        font-size: .7em;
+        padding: 5px;
+        margin-left: 10px;
+    }
+}

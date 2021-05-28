@@ -43,7 +43,7 @@
         font-family:$comfortaa ;
 }
 .signin-bttn {
-    background-color:$dark-green; 
+    background-color: $light-green;
     color: white;
         font-weight: 600;
         padding: 8px 50px;
@@ -53,3 +53,13 @@
         width: 200px;
         font-family:Comfortaa, cursive;
 }
+
+.login-part h4 {
+    margin-bottom: 0;
+    font-family: $work-sans;
+    font-weight: lighter;
+    opacity: 0.5;
+    text-align: left;
+    padding-left: 10px;
+}
+

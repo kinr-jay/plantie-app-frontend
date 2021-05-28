@@ -51,4 +51,27 @@
         border: 0;
         width: 200px;
 }
+.signup-name {
+    background-color:white;
+    color: $less-black;
+        font-weight: 600;
+        padding: 8px 50px;
+        margin: 5px 0;
+        border-radius: 16px;
+        border-style:solid;
+        border-color: black; 
+        border: "";
+        width: 200px;
+        font-family:$comfortaa ;
+}
+
+
+.signin-page h4 {
+    margin-bottom: 0;
+    font-family: $work-sans;
+    font-weight: lighter;
+    opacity: 0.5;
+    text-align: left;
+    padding-left: 10px;
+}
 
